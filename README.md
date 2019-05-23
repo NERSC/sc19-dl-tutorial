@@ -1,4 +1,4 @@
-# ISH 19 Tutorial: Deep Learning At Scale
+# ISC19 Tutorial: Deep Learning At Scale
 
 This repository contains the material for the ISC19 tutorial:
 *Deep Learning at Scale*.
