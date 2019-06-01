@@ -2,7 +2,7 @@
 # https://github.com/uber/horovod/blob/master/examples/keras_imagenet_resnet50.py
 
 description: 'ResNet ImageNet'
-output_dir: $SCRATCH/cug19-dl-tutorial/imagenet-resnet-N${SLURM_JOB_NUM_NODES}-${SLURM_JOB_ID}
+output_dir: $SCRATCH/isc19-dl-tutorial/imagenet-resnet-N${SLURM_JOB_NUM_NODES}-${SLURM_JOB_ID}
 
 data:
     name: imagenet
