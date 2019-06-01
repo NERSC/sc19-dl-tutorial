@@ -40,7 +40,7 @@ and loaded via the scripts used below.
 
 ## Navigating the repository
 
-**`train_cpe_ml.py`** - the main training script which can be steered with YAML
+**`train_horovod.py`** - the main training script which can be steered with YAML
 configuration files.
 
 **`data/`** - folder containing the specifications of the datasets. Each dataset
@@ -87,7 +87,7 @@ from the CIFAR10 dataset.
       Ask yourself: *why do we have to do this?*
     * *What kinds of data augmentation are we applying?*
 
-3. Next, take a look at the training script: [train_cpe_ml.py](train_cpe_ml.py).
+3. Next, take a look at the training script: [train_cpe_ml.py](train_horovod.py).
     * Identify the part where we retrieve the dataset.
     * Identify the section where we retrieve the CNN model, the optimizer, and
       compile the model.
@@ -140,7 +140,7 @@ amount of time.
     * Note how we construct our optimizer and then wrap it in the Horovod
       DistributedOptimizer.
 
-3. Inspect [train.py](train_cpe_ml.py) once again.
+3. Inspect [train.py](train_horovod.py) once again.
     * Identify the `init_workers` function where we initialize Horovod.
       Note where this is invoked in the main() function (right away).
     * Identify where we setup our training callbacks.

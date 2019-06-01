@@ -7,12 +7,9 @@
 #SBATCH -t 45
 #SBATCH -o logs/%x-%j.out
 
-. /usr/common/software/python/3.6-anaconda-5.2/etc/profile.d/conda.sh
-conda activate /global/cscratch1/sd/sfarrell/conda/cug19
-module use /global/cscratch1/sd/kristyn/Urika-XC1.2/opt/cray/pe/modulefiles
-module load craype-ml-plugin-py3/gnu71/1.1.4
+module load tensorflow/intel-1.13.1-py36
 
 config=configs/cifar10_cnn.yaml
-script=train_cpe_ml.py
+script=train_horovod.py
 
 srun python $script $config -d
