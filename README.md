@@ -87,7 +87,7 @@ from the CIFAR10 dataset.
       Ask yourself: *why do we have to do this?*
     * *What kinds of data augmentation are we applying?*
 
-3. Next, take a look at the training script: [train_cpe_ml.py](train_horovod.py).
+3. Next, take a look at the training script: [train_horovod.py](train_horovod.py).
     * Identify the part where we retrieve the dataset.
     * Identify the section where we retrieve the CNN model, the optimizer, and
       compile the model.
