@@ -21,6 +21,15 @@ from utils.device import configure_session
 from utils.optimizers import get_optimizer
 from utils.callbacks import TimingCallback
 
+#load dictionary from argparse
+class StoreDictKeyPair(argparse.Action):
+    def __call__(self, parser, namespace, values, option_string=None):
+        my_dict = {}
+        for kv in values.split(","):
+            k,v = kv.split("=")
+            my_dict[k] = v
+        setattr(namespace, self.dest, my_dict)
+
 def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser('train.py')
@@ -30,6 +39,11 @@ def parse_args():
     add_arg('-v', '--verbose', action='store_true')
     add_arg('--show-config', action='store_true')
     add_arg('--interactive', action='store_true')
+    #parameters which override the YAML file
+    add_arg('--dropout', type=float, help='keep rate for dropout layers')
+    add_arg("--optimizer", action=StoreDictKeyPair, help="optimizer parameters")
+    add_arg('--batch_size', type=int, help='batch size for training')
+    add_arg('--n_epochs', type=int, help='number of epochs to train')
     return parser.parse_args()
 
 def config_logging(verbose):
@@ -44,9 +58,29 @@ def init_workers(distributed=False):
         rank, n_ranks = hvd.rank(), hvd.size()
     return rank, n_ranks
 
-def load_config(config_file):
+def load_config(arguments):
+    #read base config from yaml file
+    config_file = arguments.config
     with open(config_file) as f:
         config = yaml.load(f) #, Loader=yaml.FullLoader)
+    
+    #override with CLA
+    if arguments.dropout:
+        config["model"]["dropout"] = arguments.dropout
+    if arguments.batch_size:
+        config["training"]["batch_size"] = arguments.batch_size
+    if arguments.n_epochs:
+        config["training"]["n_epochs"] = arguments.n_epochs
+    if arguments.optimizer:
+        if "name" in arguments.optimizer:
+            config["optimizer"]["name"] = arguments.optimizer["name"]
+        if "lr" in arguments.optimizer:
+            config["optimizer"]["lr"] = float(arguments.optimizer["lr"] )
+        if "lr_scaling" in arguments.optimizer:
+            config["training"]["lr_scaling"] = arguments.optimizer["lr_scaling"]
+        if "lr_warmup_epochs" in arguments.optimizer:
+            config["training"]["lr_warmup_epochs"] = int(arguments.optimizer["lr_warmup_epochs"])
+    
     return config
 
 def get_basic_callbacks(distributed=False):
@@ -69,7 +103,7 @@ def main():
     rank, n_ranks = init_workers(args.distributed)
 
     # Load configuration
-    config = load_config(args.config)
+    config = load_config(args)
     train_config = config['training']
     output_dir = os.path.expandvars(config['output_dir'])
     checkpoint_format = os.path.join(output_dir, 'checkpoints',
@@ -97,7 +131,9 @@ def main():
     # Build the model
     model = get_model(**config['model'])
     # Configure optimizer
-    opt = get_optimizer(n_ranks=n_ranks, dist_wrapper=hvd.DistributedOptimizer, **config['optimizer'])
+    opt = get_optimizer(n_ranks=n_ranks, dist_wrapper=hvd.DistributedOptimizer, \
+                        lr_scaling=train_config["lr_scaling"] if train_config["lr_scaling"] else "linear", \
+                        **config['optimizer'])
     # Compile the model
     model.compile(loss=train_config['loss'], optimizer=opt,
                   metrics=train_config['metrics'])
