@@ -77,9 +77,9 @@ def load_config(arguments):
         if "lr" in arguments.optimizer:
             config["optimizer"]["lr"] = float(arguments.optimizer["lr"] )
         if "lr_scaling" in arguments.optimizer:
-            config["training"]["lr_scaling"] = arguments.optimizer["lr_scaling"]
+            config["optimizer"]["lr_scaling"] = arguments.optimizer["lr_scaling"]
         if "lr_warmup_epochs" in arguments.optimizer:
-            config["training"]["lr_warmup_epochs"] = int(arguments.optimizer["lr_warmup_epochs"])
+            config["optimizer"]["lr_warmup_epochs"] = int(arguments.optimizer["lr_warmup_epochs"])
     
     return config
 
@@ -131,8 +131,7 @@ def main():
     # Build the model
     model = get_model(**config['model'])
     # Configure optimizer
-    opt = get_optimizer(n_ranks=n_ranks, dist_wrapper=hvd.DistributedOptimizer, \
-                        lr_scaling=train_config["lr_scaling"] if train_config["lr_scaling"] else "linear", \
+    opt = get_optimizer(n_ranks=n_ranks, dist_wrapper=hvd.DistributedOptimizer,
                         **config['optimizer'])
     # Compile the model
     model.compile(loss=train_config['loss'], optimizer=opt,
