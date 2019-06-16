@@ -16,7 +16,7 @@ optimizer:
 
 training:
     batch_size: 64
-    n_epochs: 32
+    n_epochs: 24
     lr_warmup_epochs: 5
     loss: categorical_crossentropy
     metrics: [accuracy]
