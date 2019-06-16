@@ -3,6 +3,7 @@
 #SBATCH -C knl
 #SBATCH -N 1
 #SBATCH -q debug
+#SBATCH --reservation isc19_dl_tutorial
 #SBATCH -t 30
 #SBATCH -o logs/%x-%j.out
 
