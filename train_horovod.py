@@ -79,7 +79,7 @@ def load_config(arguments):
         if "lr_scaling" in arguments.optimizer:
             config["optimizer"]["lr_scaling"] = arguments.optimizer["lr_scaling"]
         if "lr_warmup_epochs" in arguments.optimizer:
-            config["optimizer"]["lr_warmup_epochs"] = int(arguments.optimizer["lr_warmup_epochs"])
+            config["training"]["lr_warmup_epochs"] = int(arguments.optimizer["lr_warmup_epochs"])
     
     return config
 
