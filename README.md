@@ -29,6 +29,8 @@ Presentation slides: https://drive.google.com/drive/folders/1V35Lmkxmw7GwfHCyt6s
 
 NERSC JupyterHub: https://jupyter.nersc.gov
 
+Join Slack: https://join.slack.com/t/nersc-dl-tutorial/shared_invite/enQtNjQ4NTQ2OTc3MzYwLTQzNDJiOTJiZTkyZDg0ZmNhZTc4Y2ZiZjQwODg5ZmFiZGI5MjEyYWVkMWIyZDBjYTlhZjRmMjUwMjMwZWZiYzg
+
 ## Installation
 
 1. Start a terminal on Cori, either via ssh or from the Jupyter interface.
