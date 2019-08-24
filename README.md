@@ -142,7 +142,7 @@ amount of time.
     * Note how we construct our optimizer and then wrap it in the Horovod
       DistributedOptimizer.
 
-3. Inspect [train.py](train_horovod.py) once again.
+3. Inspect [train.py](train.py) once again.
     * Identify the `init_workers` function where we initialize Horovod.
       Note where this is invoked in the main() function (right away).
     * Identify where we setup our training callbacks.
