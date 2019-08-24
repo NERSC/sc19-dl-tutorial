@@ -42,7 +42,7 @@ and loaded via the scripts used below.
 
 ## Navigating the repository
 
-**`train_horovod.py`** - the main training script which can be steered with YAML
+**`train.py`** - the main training script which can be steered with YAML
 configuration files.
 
 **`data/`** - folder containing the specifications of the datasets. Each dataset
