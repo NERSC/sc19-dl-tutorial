@@ -190,7 +190,7 @@ def main():
         logging.info('Average time per epoch: %.3f s',
                      np.mean(timing_callback.times))
         # Save training history
-        if not args.no_outputs:
+        if not args.no_output:
             np.savez(os.path.join(output_dir, 'history'),
                      n_ranks=n_ranks, **history.history)
 
