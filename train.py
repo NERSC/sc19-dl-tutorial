@@ -64,7 +64,7 @@ def load_config(args):
     # Read base config from yaml file
     config_file = args.config
     with open(config_file) as f:
-        config = yaml.load(f) #, Loader=yaml.FullLoader)
+        config = yaml.load(f, Loader=yaml.FullLoader)
     
     # Override with command line arguments
     if args.dropout is not None:
