@@ -25,8 +25,8 @@ from utils.callbacks import TimingCallback
 class StoreDictKeyPair(argparse.Action):
     def __call__(self, parser, namespace, values, option_string=None):
         my_dict = {}
-        for kv in values.split(","):
-            k,v = kv.split("=")
+        for kv in values.split(','):
+            k,v = kv.split('=')
             my_dict[k] = v
         setattr(namespace, self.dest, my_dict)
 
@@ -41,9 +41,9 @@ def parse_args():
     add_arg('--interactive', action='store_true')
     #parameters which override the YAML file
     add_arg('--dropout', type=float, help='keep rate for dropout layers')
-    add_arg("--optimizer", action=StoreDictKeyPair, help="optimizer parameters")
-    add_arg('--batch_size', type=int, help='batch size for training')
-    add_arg('--n_epochs', type=int, help='number of epochs to train')
+    add_arg('--optimizer', action=StoreDictKeyPair, help='optimizer parameters')
+    add_arg('--batch-size', type=int, help='batch size for training')
+    add_arg('--n-epochs', type=int, help='number of epochs to train')
     return parser.parse_args()
 
 def config_logging(verbose):
@@ -66,20 +66,20 @@ def load_config(arguments):
     
     #override with CLA
     if arguments.dropout:
-        config["model"]["dropout"] = arguments.dropout
+        config['model']['dropout'] = arguments.dropout
     if arguments.batch_size:
-        config["training"]["batch_size"] = arguments.batch_size
+        config['training']['batch_size'] = arguments.batch_size
     if arguments.n_epochs:
-        config["training"]["n_epochs"] = arguments.n_epochs
+        config['training']['n_epochs'] = arguments.n_epochs
     if arguments.optimizer:
-        if "name" in arguments.optimizer:
-            config["optimizer"]["name"] = arguments.optimizer["name"]
-        if "lr" in arguments.optimizer:
-            config["optimizer"]["lr"] = float(arguments.optimizer["lr"] )
-        if "lr_scaling" in arguments.optimizer:
-            config["optimizer"]["lr_scaling"] = arguments.optimizer["lr_scaling"]
-        if "lr_warmup_epochs" in arguments.optimizer:
-            config["training"]["lr_warmup_epochs"] = int(arguments.optimizer["lr_warmup_epochs"])
+        if 'name' in arguments.optimizer:
+            config['optimizer']['name'] = arguments.optimizer['name']
+        if 'lr' in arguments.optimizer:
+            config['optimizer']['lr'] = float(arguments.optimizer['lr'] )
+        if 'lr_scaling' in arguments.optimizer:
+            config['optimizer']['lr_scaling'] = arguments.optimizer['lr_scaling']
+        if 'lr_warmup_epochs' in arguments.optimizer:
+            config['training']['lr_warmup_epochs'] = int(arguments.optimizer['lr_warmup_epochs'])
     
     return config
 
