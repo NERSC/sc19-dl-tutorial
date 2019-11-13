@@ -185,20 +185,6 @@ things like
 Most of these things can be changed entirely within the configuration.
 See [configs/imagenet_resnet.yaml](configs/imagenet_resnet.yaml) for examples.
 
-### Advanced example: multi-node ResNet50 on ImageNet-100
-
-We may not have the time and compute resources to do this (certainly not for
-all attendees), but this repository also includes a more advanced ResNet50 
-example and a 100-class subset of the ImageNet dataset. ResNet and ImageNet
-are a fairly standard benchmark for scalable deep learning methods.
-The configuration is available in
-[configs/imagenet_resnet.yaml](configs/imagenet_resnet.yaml)
-
-Please check with the presenters before submitting large scale training jobs
-with this example, as we have a limited reservation of nodes on Cori and we
-want to make sure all tutorial attendees are able to complete the core content
-and have a chance to play with settings in the ResNet-CIFAR example.
-
 ## Code references
 
 Keras ResNet50 official model:
