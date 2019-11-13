@@ -136,8 +136,7 @@ def main():
     # Build the model
     model = get_model(**config['model'])
     # Configure optimizer
-    opt = get_optimizer(n_ranks=n_ranks, dist_wrapper=hvd.DistributedOptimizer,
-                        **config['optimizer'])
+    opt = get_optimizer(n_ranks=n_ranks, **config['optimizer'])
     # Compile the model
     model.compile(loss=train_config['loss'], optimizer=opt,
                   metrics=train_config['metrics'])

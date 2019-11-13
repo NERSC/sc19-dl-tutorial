@@ -7,8 +7,9 @@ import math
 
 # Externals
 import keras
+import horovod.keras as hvd
 
-def get_optimizer(name, lr, lr_scaling='linear', n_ranks=1, dist_wrapper=None, **opt_args):
+def get_optimizer(name, lr, lr_scaling='linear', n_ranks=1, **opt_args):
     """
     Configure the optimizer and scale the learning rate by n_ranks.
     """
@@ -23,7 +24,7 @@ def get_optimizer(name, lr, lr_scaling='linear', n_ranks=1, dist_wrapper=None, *
     opt = OptType(lr=lr, **opt_args)
 
     # Distributed optimizer wrapper
-    if n_ranks > 1 and dist_wrapper:
-        opt = dist_wrapper(opt)
+    if n_ranks > 1:
+        opt = hvd.DistributedOptimizer(opt)
 
     return opt
