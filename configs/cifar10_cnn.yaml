@@ -1,4 +1,3 @@
-description: 'CNN CIFAR10'
 output_dir: $SCRATCH/sc19-dl-tutorial/cifar-cnn-N${SLURM_JOB_NUM_NODES}-${SLURM_JOB_ID}
 
 data:
