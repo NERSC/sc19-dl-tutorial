@@ -10,6 +10,6 @@
 module load tensorflow/intel-1.13.1-py36
 
 config=configs/cifar10_cnn.yaml
-script=train_horovod.py
+script=train.py
 
 srun python $script $config -d
