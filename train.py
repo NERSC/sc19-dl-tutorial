@@ -58,29 +58,29 @@ def init_workers(distributed=False):
         rank, n_ranks = hvd.rank(), hvd.size()
     return rank, n_ranks
 
-def load_config(arguments):
-    #read base config from yaml file
-    config_file = arguments.config
+def load_config(args):
+    # Read base config from yaml file
+    config_file = args.config
     with open(config_file) as f:
         config = yaml.load(f) #, Loader=yaml.FullLoader)
     
-    #override with CLA
-    if arguments.dropout:
-        config['model']['dropout'] = arguments.dropout
-    if arguments.batch_size:
-        config['training']['batch_size'] = arguments.batch_size
-    if arguments.n_epochs:
-        config['training']['n_epochs'] = arguments.n_epochs
-    if arguments.optimizer:
-        if 'name' in arguments.optimizer:
-            config['optimizer']['name'] = arguments.optimizer['name']
-        if 'lr' in arguments.optimizer:
-            config['optimizer']['lr'] = float(arguments.optimizer['lr'] )
-        if 'lr_scaling' in arguments.optimizer:
-            config['optimizer']['lr_scaling'] = arguments.optimizer['lr_scaling']
-        if 'lr_warmup_epochs' in arguments.optimizer:
-            config['training']['lr_warmup_epochs'] = int(arguments.optimizer['lr_warmup_epochs'])
-    
+    # Override with command line arguments
+    if args.dropout is not None:
+        config['model']['dropout'] = args.dropout
+    if args.batch_size is not None:
+        config['training']['batch_size'] = args.batch_size
+    if args.n_epochs is not None:
+        config['training']['n_epochs'] = args.n_epochs
+    if args.optimizer is not None:
+        if 'name' in args.optimizer:
+            config['optimizer']['name'] = args.optimizer['name']
+        if 'lr' in args.optimizer:
+            config['optimizer']['lr'] = float(args.optimizer['lr'] )
+        if 'lr_scaling' in args.optimizer:
+            config['optimizer']['lr_scaling'] = args.optimizer['lr_scaling']
+        if 'lr_warmup_epochs' in args.optimizer:
+            config['training']['lr_warmup_epochs'] = int(args.optimizer['lr_warmup_epochs'])
+
     return config
 
 def get_basic_callbacks(distributed=False):
@@ -173,7 +173,7 @@ def main():
                                   callbacks=callbacks,
                                   workers=4, verbose=2 if rank==0 else 0)
 
-    # Save training history
+    # Logging and saving
     if rank == 0:
         # Print some best-found metrics
         if 'val_acc' in history.history.keys():
