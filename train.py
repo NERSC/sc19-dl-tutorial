@@ -44,6 +44,8 @@ def parse_args():
     add_arg('--optimizer', action=StoreDictKeyPair, help='optimizer parameters')
     add_arg('--batch-size', type=int, help='batch size for training')
     add_arg('--n-epochs', type=int, help='number of epochs to train')
+    add_arg('--no-output', action='store_true',
+            help='disable checkpointing and summary saving')
     return parser.parse_args()
 
 def config_logging(verbose):
@@ -108,7 +110,7 @@ def main():
     output_dir = os.path.expandvars(config['output_dir'])
     checkpoint_format = os.path.join(output_dir, 'checkpoints',
                                      'checkpoint-{epoch}.h5')
-    if rank==0:
+    if rank==0 and not args.no_output:
         os.makedirs(output_dir, exist_ok=True)
 
     # Loggging
@@ -118,7 +120,10 @@ def main():
         logging.info('Command line config: %s', args)
     if rank == 0:
         logging.info('Job configuration: %s', config)
-        logging.info('Saving job outputs to %s', output_dir)
+        if args.no_output:
+            logging.info('Disabling job outputs')
+        else:
+            logging.info('Saving job outputs to %s', output_dir)
 
     # Configure session
     device_config = config.get('device', {})
@@ -154,7 +159,7 @@ def main():
         callbacks.append(hvd.callbacks.LearningRateScheduleCallback(**lr_schedule))
 
     # Checkpoint only from rank 0
-    if rank == 0:
+    if rank == 0 and not args.no_output:
         os.makedirs(os.path.dirname(checkpoint_format), exist_ok=True)
         callbacks.append(keras.callbacks.ModelCheckpoint(checkpoint_format))
         
@@ -184,8 +189,10 @@ def main():
                          max(history.history['val_top_k_categorical_accuracy']))
         logging.info('Average time per epoch: %.3f s',
                      np.mean(timing_callback.times))
-        np.savez(os.path.join(output_dir, 'history'),
-                 n_ranks=n_ranks, **history.history)
+        # Save training history
+        if not args.no_outputs:
+            np.savez(os.path.join(output_dir, 'history'),
+                     n_ranks=n_ranks, **history.history)
 
     # Drop to IPython interactive shell
     if args.interactive and (rank == 0):
