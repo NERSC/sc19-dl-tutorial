@@ -10,6 +10,8 @@
 
 # Load the software
 module load tensorflow/intel-1.13.1-py36
+export KMP_BLOCKTIME=0
+export KMP_AFFINITY="granularity=fine,compact,1,0"
 config=configs/cifar10_cnn.yaml
 
 # Ensure dataset is downloaded by single process
