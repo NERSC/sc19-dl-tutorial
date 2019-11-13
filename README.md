@@ -25,11 +25,11 @@ As part of the tutorial, you will
 
 ## Links
 
-Presentation slides: https://drive.google.com/drive/folders/1V35Lmkxmw7GwfHCyt6sPkc9lCuDmLPe2?usp=sharing
+Presentation slides: https://drive.google.com/drive/folders/1KJm08Ry4qJXOl19MAu2Ao1t_fRNaMwZn?usp=sharing
 
 NERSC JupyterHub: https://jupyter.nersc.gov
 
-Join Slack: https://join.slack.com/t/nersc-dl-tutorial/shared_invite/enQtNjQ4NTQ2OTc3MzYwLTQzNDJiOTJiZTkyZDg0ZmNhZTc4Y2ZiZjQwODg5ZmFiZGI5MjEyYWVkMWIyZDBjYTlhZjRmMjUwMjMwZWZiYzg
+Join Slack: https://join.slack.com/t/nersc-dl-tutorial/shared_invite/enQtODMzMzQ1MTI5OTUyLWNlNzg2MjBkODIwODRlNTBkM2M4MjI0ZDk2ZDU4N2M3NjU5MDk1NTRmMTFhNWRkMTk0NGNhMzQ3YjU2NzU5NTk
 
 ## Installation
 
