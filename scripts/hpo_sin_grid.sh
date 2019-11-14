@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J hpo_sin_grid
+#SBATCH -J hpo-sin-grid
 #SBATCH -C knl
 #SBATCH -N 1
 #SBATCH -q debug
@@ -9,6 +9,7 @@
 module load tensorflow/intel-1.13.1-py36
 module load cray-hpo
 
-script=hpo/sin/grid_example.py
+script=grid_example.py
+path=hpo/sin
 
-srun python $script -d
+cd $path && srun python $script

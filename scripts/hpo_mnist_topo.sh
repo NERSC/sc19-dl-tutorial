@@ -1,13 +1,15 @@
 #!/bin/bash
-#SBATCH -J mnist_topo
+#SBATCH -J hpo-lenet5-mnist
 #SBATCH -C knl
-#SBATCH -N 1
+#SBATCH -N 8
 #SBATCH -t 30:00
 #SBATCH -o logs/%x-%j.out
 
 module load tensorflow/intel-1.13.1-py36
 module load cray-hpo
 
-script=hpo/mnist-topology/genetic.py
+script=genetic.py
+args=-N ${SLURM_JOB_NUM_NODES} --verbose
+path=hpo/mnist-topology
 
-srun python $script
+cd $path && srun python $script $args

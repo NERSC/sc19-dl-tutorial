@@ -44,7 +44,7 @@ def parse_args():
     add_arg("--optimizer", action=StoreDictKeyPair, help="optimizer parameters")
     add_arg('--batch_size', type=int, help='batch size for training')
     add_arg('--n_epochs', type=int, help='number of epochs to train')
-    add_arg('--hpo', action='store_true', help'Enable HPO fom output')
+    add_arg('--hpo', action='store_true', help='Enable HPO fom output')
     return parser.parse_args()
 
 def config_logging(verbose):
@@ -196,7 +196,7 @@ def main():
 
     if rank == 0:
         if args.hpo:
-            logging.info('FoM: ' + str(history.history['val_loss'][0]))
+            print('FoM: ' + str(history.history['val_loss'][0]))
         logging.info('All done!')
 
 if __name__ == '__main__':

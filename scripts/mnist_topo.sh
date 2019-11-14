@@ -10,4 +10,4 @@ module load cray-hpo
 
 script=hpo/mnist-topology/source/mnist.py
 
-srun python $script -d
+srun python $script
