@@ -25,11 +25,11 @@ As part of the tutorial, you will
 
 ## Links
 
-Presentation slides: https://drive.google.com/drive/folders/1V35Lmkxmw7GwfHCyt6sPkc9lCuDmLPe2?usp=sharing
+Presentation slides: https://drive.google.com/drive/folders/1KJm08Ry4qJXOl19MAu2Ao1t_fRNaMwZn?usp=sharing
 
 NERSC JupyterHub: https://jupyter.nersc.gov
 
-Join Slack: https://join.slack.com/t/nersc-dl-tutorial/shared_invite/enQtNjQ4NTQ2OTc3MzYwLTQzNDJiOTJiZTkyZDg0ZmNhZTc4Y2ZiZjQwODg5ZmFiZGI5MjEyYWVkMWIyZDBjYTlhZjRmMjUwMjMwZWZiYzg
+Join Slack: https://join.slack.com/t/nersc-dl-tutorial/shared_invite/enQtODMzMzQ1MTI5OTUyLWNlNzg2MjBkODIwODRlNTBkM2M4MjI0ZDk2ZDU4N2M3NjU5MDk1NTRmMTFhNWRkMTk0NGNhMzQ3YjU2NzU5NTk
 
 ## Installation
 
@@ -89,7 +89,7 @@ from the CIFAR10 dataset.
       Ask yourself: *why do we have to do this?*
     * *What kinds of data augmentation are we applying?*
 
-3. Next, take a look at the training script: [train_horovod.py](train_horovod.py).
+3. Next, take a look at the training script: [train.py](train.py).
     * Identify the part where we retrieve the dataset.
     * Identify the section where we retrieve the CNN model, the optimizer, and
       compile the model.
@@ -184,20 +184,6 @@ things like
 
 Most of these things can be changed entirely within the configuration.
 See [configs/imagenet_resnet.yaml](configs/imagenet_resnet.yaml) for examples.
-
-### Advanced example: multi-node ResNet50 on ImageNet-100
-
-We may not have the time and compute resources to do this (certainly not for
-all attendees), but this repository also includes a more advanced ResNet50 
-example and a 100-class subset of the ImageNet dataset. ResNet and ImageNet
-are a fairly standard benchmark for scalable deep learning methods.
-The configuration is available in
-[configs/imagenet_resnet.yaml](configs/imagenet_resnet.yaml)
-
-Please check with the presenters before submitting large scale training jobs
-with this example, as we have a limited reservation of nodes on Cori and we
-want to make sure all tutorial attendees are able to complete the core content
-and have a chance to play with settings in the ResNet-CIFAR example.
 
 ## Code references
 

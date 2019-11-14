@@ -1,5 +1,4 @@
-description: 'Hello world'
-output_dir: $SCRATCH/isc19-dl-tutorial/hello-world
+output_dir: $SCRATCH/sc19-dl-tutorial/hello-world
 
 data:
     name: dummy

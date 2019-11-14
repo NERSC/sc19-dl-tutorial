@@ -25,8 +25,8 @@ from utils.callbacks import TimingCallback
 class StoreDictKeyPair(argparse.Action):
     def __call__(self, parser, namespace, values, option_string=None):
         my_dict = {}
-        for kv in values.split(","):
-            k,v = kv.split("=")
+        for kv in values.split(','):
+            k,v = kv.split('=')
             my_dict[k] = v
         setattr(namespace, self.dest, my_dict)
 
@@ -41,9 +41,11 @@ def parse_args():
     add_arg('--interactive', action='store_true')
     #parameters which override the YAML file
     add_arg('--dropout', type=float, help='keep rate for dropout layers')
-    add_arg("--optimizer", action=StoreDictKeyPair, help="optimizer parameters")
-    add_arg('--batch_size', type=int, help='batch size for training')
-    add_arg('--n_epochs', type=int, help='number of epochs to train')
+    add_arg('--optimizer', action=StoreDictKeyPair, help='optimizer parameters')
+    add_arg('--batch-size', type=int, help='batch size for training')
+    add_arg('--n-epochs', type=int, help='number of epochs to train')
+    add_arg('--no-output', action='store_true',
+            help='disable checkpointing and summary saving')
     add_arg('--hpo', action='store_true', help='Enable HPO fom output')
     return parser.parse_args()
 
@@ -59,28 +61,28 @@ def init_workers(distributed=False):
         rank, n_ranks = hvd.rank(), hvd.size()
     return rank, n_ranks
 
-def load_config(arguments):
-    #read base config from yaml file
-    config_file = arguments.config
+def load_config(args):
+    # Read base config from yaml file
+    config_file = args.config
     with open(config_file) as f:
-        config = yaml.load(f) #, Loader=yaml.FullLoader)
+        config = yaml.load(f, Loader=yaml.FullLoader)
 
-    #override with CLA
-    if arguments.dropout:
-        config["model"]["dropout"] = arguments.dropout
-    if arguments.batch_size:
-        config["training"]["batch_size"] = arguments.batch_size
-    if arguments.n_epochs:
-        config["training"]["n_epochs"] = arguments.n_epochs
-    if arguments.optimizer:
-        if "name" in arguments.optimizer:
-            config["optimizer"]["name"] = arguments.optimizer["name"]
-        if "lr" in arguments.optimizer:
-            config["optimizer"]["lr"] = float(arguments.optimizer["lr"] )
-        if "lr_scaling" in arguments.optimizer:
-            config["optimizer"]["lr_scaling"] = arguments.optimizer["lr_scaling"]
-        if "lr_warmup_epochs" in arguments.optimizer:
-            config["training"]["lr_warmup_epochs"] = int(arguments.optimizer["lr_warmup_epochs"])
+    # Override with command line arguments
+    if args.dropout is not None:
+        config['model']['dropout'] = args.dropout
+    if args.batch_size is not None:
+        config['training']['batch_size'] = args.batch_size
+    if args.n_epochs is not None:
+        config['training']['n_epochs'] = args.n_epochs
+    if args.optimizer is not None:
+        if 'name' in args.optimizer:
+            config['optimizer']['name'] = args.optimizer['name']
+        if 'lr' in args.optimizer:
+            config['optimizer']['lr'] = float(args.optimizer['lr'] )
+        if 'lr_scaling' in args.optimizer:
+            config['optimizer']['lr_scaling'] = args.optimizer['lr_scaling']
+        if 'lr_warmup_epochs' in args.optimizer:
+            config['training']['lr_warmup_epochs'] = int(args.optimizer['lr_warmup_epochs'])
 
     return config
 
@@ -109,7 +111,7 @@ def main():
     output_dir = os.path.expandvars(config['output_dir'])
     checkpoint_format = os.path.join(output_dir, 'checkpoints',
                                      'checkpoint-{epoch}.h5')
-    if rank==0:
+    if rank==0 and not args.no_output:
         os.makedirs(output_dir, exist_ok=True)
 
     # Loggging
@@ -119,7 +121,10 @@ def main():
         logging.info('Command line config: %s', args)
     if rank == 0:
         logging.info('Job configuration: %s', config)
-        logging.info('Saving job outputs to %s', output_dir)
+        if args.no_output:
+            logging.info('Disabling job outputs')
+        else:
+            logging.info('Saving job outputs to %s', output_dir)
 
     # Configure session
     device_config = config.get('device', {})
@@ -132,8 +137,7 @@ def main():
     # Build the model
     model = get_model(**config['model'])
     # Configure optimizer
-    opt = get_optimizer(n_ranks=n_ranks, dist_wrapper=hvd.DistributedOptimizer,
-                        **config['optimizer'])
+    opt = get_optimizer(n_ranks=n_ranks, **config['optimizer'])
     # Compile the model
     model.compile(loss=train_config['loss'], optimizer=opt,
                   metrics=train_config['metrics'])
@@ -155,7 +159,7 @@ def main():
         callbacks.append(hvd.callbacks.LearningRateScheduleCallback(**lr_schedule))
 
     # Checkpoint only from rank 0
-    if rank == 0:
+    if rank == 0 and not args.no_output:
         os.makedirs(os.path.dirname(checkpoint_format), exist_ok=True)
         callbacks.append(keras.callbacks.ModelCheckpoint(checkpoint_format))
 
@@ -174,7 +178,7 @@ def main():
                                   callbacks=callbacks,
                                   workers=4, verbose=2 if rank==0 else 0)
 
-    # Save training history
+    # Logging and saving
     if rank == 0:
         # Print some best-found metrics
         if 'val_acc' in history.history.keys():
@@ -185,8 +189,10 @@ def main():
                          max(history.history['val_top_k_categorical_accuracy']))
         logging.info('Average time per epoch: %.3f s',
                      np.mean(timing_callback.times))
-        np.savez(os.path.join(output_dir, 'history'),
-                 n_ranks=n_ranks, **history.history)
+        # Save training history
+        if not args.no_output:
+            np.savez(os.path.join(output_dir, 'history'),
+                     n_ranks=n_ranks, **history.history)
 
     # Drop to IPython interactive shell
     if args.interactive and (rank == 0):
