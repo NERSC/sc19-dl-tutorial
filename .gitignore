@@ -1,1 +1,6 @@
 *.ipynb_checkpoints
+*.log
+*.out
+*.gz
+run
+__pycache__

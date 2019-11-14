@@ -1,0 +1,23 @@
+# Scaled down version of CNN CIFAR10 for quicker evaluations
+description: 'SHORT CNN CIFAR10'
+output_dir: $SCRATCH/sc19-dl-tutorial/cifar-cnn-N${SLURM_JOB_NUM_NODES}-${SLURM_JOB_ID}
+
+data:
+    name: cifar10
+
+model:
+    name: cnn
+    input_shape: [32, 32, 3]
+    n_classes: 10
+    dropout: 0.1
+
+optimizer:
+    name: Adam
+    lr: 0.001
+
+training:
+    batch_size: 64
+    n_epochs: 4
+    lr_warmup_epochs: 0
+    loss: categorical_crossentropy
+    metrics: [accuracy]

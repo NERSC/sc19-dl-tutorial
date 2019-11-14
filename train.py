@@ -44,6 +44,7 @@ def parse_args():
     add_arg("--optimizer", action=StoreDictKeyPair, help="optimizer parameters")
     add_arg('--batch_size', type=int, help='batch size for training')
     add_arg('--n_epochs', type=int, help='number of epochs to train')
+    add_arg('--hpo', action='store_true', help'Enable HPO fom output')
     return parser.parse_args()
 
 def config_logging(verbose):
@@ -63,7 +64,7 @@ def load_config(arguments):
     config_file = arguments.config
     with open(config_file) as f:
         config = yaml.load(f) #, Loader=yaml.FullLoader)
-    
+
     #override with CLA
     if arguments.dropout:
         config["model"]["dropout"] = arguments.dropout
@@ -80,12 +81,12 @@ def load_config(arguments):
             config["optimizer"]["lr_scaling"] = arguments.optimizer["lr_scaling"]
         if "lr_warmup_epochs" in arguments.optimizer:
             config["training"]["lr_warmup_epochs"] = int(arguments.optimizer["lr_warmup_epochs"])
-    
+
     return config
 
 def get_basic_callbacks(distributed=False):
     cb = []
-    
+
     if distributed:
         #this is for broadcasting the initial model to all nodes
         cb.append(hvd.callbacks.BroadcastGlobalVariablesCallback(0))
@@ -157,7 +158,7 @@ def main():
     if rank == 0:
         os.makedirs(os.path.dirname(checkpoint_format), exist_ok=True)
         callbacks.append(keras.callbacks.ModelCheckpoint(checkpoint_format))
-        
+
     # Timing callback
     timing_callback = TimingCallback()
     callbacks.append(timing_callback)
@@ -194,6 +195,8 @@ def main():
         IPython.embed()
 
     if rank == 0:
+        if args.hpo:
+            logging.info('FoM: ' + str(history.history['val_loss'][0]))
         logging.info('All done!')
 
 if __name__ == '__main__':
