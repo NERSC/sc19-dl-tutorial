@@ -10,7 +10,6 @@ from os.path import abspath, dirname
 pwd = path.dirname(path.abspath(__file__))
 src_path = path.join(pwd, 'source')
 
-print(src_path)
 evaluator = hpo.Evaluator('python source/sin.py', verbose=True)
 
 params = hpo.Params([["-a", 1.0, (-1.0, 1.0)],
