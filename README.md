@@ -185,6 +185,70 @@ things like
 Most of these things can be changed entirely within the configuration.
 See [configs/imagenet_resnet.yaml](configs/imagenet_resnet.yaml) for examples.
 
+### Hyperparameter Optimization
+
+The following examples will walk you through how to utilize distributed
+hyperparameter optimization with the Cray HPO package.
+
+For documentation reference, see the
+[Cray HPO documentation](https://cray.github.io/crayai/hpo/hpo.html).
+
+#### Example: Hello World HPO examples
+
+This is a set of quick-running examples that you may view and run to get
+acquainted with the Cray HPO interface.
+
+Further instructions are in: `hpo/sin/README.md`
+
+#### Example: Applying distributed HPO to CNN CIFAR10 example
+
+In this example, we will be optimizing the hyperparameters of the CNN single node
+training example from before.
+
+1. Take a look `train.py` again and follow the `--hpo` argument. Note that the
+   loss value is being emitted when this argument is set, which is necessary to
+   communicate the figure of merit back to the Cray HPO optimizer. Additionally,
+   inspect the `configs/hpo_cifar10_cnn.yaml` configuration, and note that the
+   number of epochs has been scaled down significantly so that this example can
+   run to completion in a reasonable amount of time.
+
+2. Take a look at the `hpo_train.py` HPO driver. This script sets up the
+   evaluator, hyperparameter search space, and optimizer. Make sure you
+   understand the HPO code by trying to answer these questions:
+
+   * What hyperparameters are being optimized?
+   * Which optimizer is being used for this example?
+   * How many evaluations of `train.py` will this optimization run?
+
+3. Now we are ready to run our hyperparameter optimization. Similar to before,
+   a SLURM script is provided to run the HPO driver on 8 KNL nodes:
+
+   ```
+   sbatch scripts/hpo_cifar_cnn.sh
+   ```
+
+   If no modifications were made, this should take ~12 minutes to run to
+   completion.
+
+4. Take a look at your job output file (`*.out`) in the `logs/` directory. Try
+   to identify the following:
+
+    * How much was your figure of merit improved?
+    * What were the improved hyperparameter values found?
+
+
+#### Example: Optimizing topology of LeNet-5
+
+This is an example of using Cray HPO to optimize hyperparameters for LeNet-5
+trained on the MNIST hand-written digits dataset.
+
+This example is unique because the figure of merit is the elapsed training time
+until a threshold accuracy is reached, to minimize time-to-accuracy.
+Additionally, this example shows how one can optimize network topology with
+other traditional hyperparameters.
+
+Further instructions are in: `hpo/mnist-lenet5/README.md`
+
 ## Code references
 
 Keras ResNet50 official model:
