@@ -46,6 +46,7 @@ def parse_args():
     add_arg('--n-epochs', type=int, help='number of epochs to train')
     add_arg('--no-output', action='store_true',
             help='disable checkpointing and summary saving')
+    add_arg('--hpo', action='store_true', help='Enable HPO fom output')
     return parser.parse_args()
 
 def config_logging(verbose):
@@ -65,7 +66,7 @@ def load_config(args):
     config_file = args.config
     with open(config_file) as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
-    
+
     # Override with command line arguments
     if args.dropout is not None:
         config['model']['dropout'] = args.dropout
@@ -87,7 +88,7 @@ def load_config(args):
 
 def get_basic_callbacks(distributed=False):
     cb = []
-    
+
     if distributed:
         #this is for broadcasting the initial model to all nodes
         cb.append(hvd.callbacks.BroadcastGlobalVariablesCallback(0))
@@ -161,7 +162,7 @@ def main():
     if rank == 0 and not args.no_output:
         os.makedirs(os.path.dirname(checkpoint_format), exist_ok=True)
         callbacks.append(keras.callbacks.ModelCheckpoint(checkpoint_format))
-        
+
     # Timing callback
     timing_callback = TimingCallback()
     callbacks.append(timing_callback)
@@ -200,6 +201,8 @@ def main():
         IPython.embed()
 
     if rank == 0:
+        if args.hpo:
+            print('FoM: ' + str(history.history['val_loss'][0]))
         logging.info('All done!')
 
 if __name__ == '__main__':
