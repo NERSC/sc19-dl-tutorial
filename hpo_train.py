@@ -1,4 +1,5 @@
-"""Hyperparameter optimization of train.py for cifar10_cnn"""
+"""Hyperparameter optimization of cifar10_cnn example (train.py)"""
+
 # System
 import argparse
 
@@ -18,7 +19,11 @@ def main():
     args = parse_args()
 
     # Set up evaluator
-    evaluator = hpo.Evaluator('python ./train.py configs/hpo_cifar10_cnn.yaml --hpo',
+    # configs/hpo_cifar10_cnn.yaml is a scaled down version of cifar10
+    # --hpo is required for train.py to print the FoM
+    # --no-output is required to avoid checkpointing
+    eval_cmd = 'python ./train.py configs/hpo_cifar10_cnn.yaml --hpo --no-output'
+    evaluator = hpo.Evaluator(eval_cmd,
                               nodes=args.num_nodes,
                               verbose=args.verbose)
 
@@ -27,10 +32,10 @@ def main():
                          ['--dropout', 0.1, (0.0, 0.5)]])
 
 
-    # Each eval takes ~6 minutes, so 20 evals over 4 nodes should take ~30 minutes
-    optimizer = hpo.RandomOptimizer(evaluator,
-                                    num_iters=1,
-                                    verbose=args.verbose)
+    # Set up genetic optimizer with 16 evaluations/generation and 3 generations
+    optimizer = hpo.GeneticOptimizer(evaluator, generations=3, pop_size=16,
+                                     num_demes=1, mutation_rate=0.6,
+                                     verbose=args.verbose)
 
     # Optimize the hyperparameters
     optimizer.optimize(params)

@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -J hpo-sin-random
+#SBATCH -J hpo-mnist-lenet5
 #SBATCH -C knl
-#SBATCH -N 1
+#SBATCH -N 4
 #SBATCH -q debug
 #SBATCH -t 30:00
 #SBATCH -o logs/%x-%j.out
@@ -11,7 +11,8 @@
 module load tensorflow/intel-1.13.1-py36
 module load cray-hpo
 
-script=random_example.py
-path=hpo/sin
+script=genetic.py
+args="-N ${SLURM_JOB_NUM_NODES} --verbose"
+path=hpo/mnist-lenet5
 
-cd $path && python $script
+cd $path && python $script $args
