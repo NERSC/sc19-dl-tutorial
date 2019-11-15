@@ -3,13 +3,6 @@
 """Genetic optimizer example"""
 from crayai import hpo
 
-from os import path
-from os.path import abspath, dirname
-
-# Give abs path to src directory so that this script can be run from anywhere:
-pwd = path.dirname(path.abspath(__file__))
-src_path = path.join(pwd, 'source')
-
 evaluator = hpo.Evaluator('python source/sin.py', verbose=True)
 
 params = hpo.Params([["-a", 1.0, (-1.0, 1.0)],
