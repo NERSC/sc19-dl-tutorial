@@ -1,4 +1,4 @@
-# Sin Example
+# Hello World Examples
 
 This directory contains a "hello world" of hyperparameter optimization:
 Find the coefficients (our hyperparameter) of a 5th order polynomial that
@@ -47,5 +47,4 @@ respective batch script:
     sbatch scripts/hpo_random.sh
     sbatch scripts/hpo_genetic.sh
 
-
-These examples should take less than a minute to run to completion each.
+Each of these examples takes 30-60 seconds to run to completion on 1 node.

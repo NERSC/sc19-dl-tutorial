@@ -6,10 +6,12 @@
 #SBATCH -t 30:00
 #SBATCH -o logs/%x-%j.out
 
+##SBATCH --reservation dl4sci_sc19
+
 module load tensorflow/intel-1.13.1-py36
 module load cray-hpo
 
 script=genetic_example.py
 path=hpo/sin
 
-cd $path && srun python $script
+cd $path && python $script

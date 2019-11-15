@@ -15,6 +15,7 @@ optimizer:
     name: Adam
     lr: 0.001
 
+# Scaled down n_epochs
 training:
     batch_size: 64
     n_epochs: 4
