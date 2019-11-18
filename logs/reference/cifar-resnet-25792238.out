@@ -1,0 +1,482 @@
+Using TensorFlow backend.
+Using TensorFlow backend.
+2019-11-13 16:48:44,995 INFO Initialized rank 7 out of 8
+Using TensorFlow backend.
+2019-11-13 16:48:44,997 INFO Initialized rank 1 out of 8
+Using TensorFlow backend.
+2019-11-13 16:48:44,998 INFO Initialized rank 6 out of 8
+Using TensorFlow backend.
+2019-11-13 16:48:44,996 INFO Initialized rank 5 out of 8
+Using TensorFlow backend.
+2019-11-13 16:48:44,996 INFO Initialized rank 3 out of 8
+Using TensorFlow backend.
+2019-11-13 16:48:44,997 INFO Initialized rank 4 out of 8
+Using TensorFlow backend.
+2019-11-13 16:48:44,996 INFO Initialized rank 2 out of 8
+2019-11-13 16:48:44.999173: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2019-11-13 16:48:44.999133: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2019-11-13 16:48:44.999074: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2019-11-13 16:48:45.000200: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2019-11-13 16:48:45.000819: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2019-11-13 16:48:44.999290: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+Using TensorFlow backend.
+2019-11-13 16:48:44,999 INFO Initialized rank 0 out of 8
+2019-11-13 16:48:45.001530: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2019-11-13 16:48:45,000 INFO Job configuration: {'output_dir': '$SCRATCH/sc19-dl-tutorial/cifar10-resnet-N${SLURM_JOB_NUM_NODES}-${SLURM_JOB_ID}', 'data': {'name': 'cifar10'}, 'model': {'name': 'resnet_small', 'input_shape': [32, 32, 3], 'n_classes': 10}, 'optimizer': {'name': 'Adam', 'lr': 0.0001, 'lr_scaling': 'linear'}, 'training': {'batch_size': 64, 'n_epochs': 32, 'lr_warmup_epochs': 5, 'loss': 'categorical_crossentropy', 'metrics': ['accuracy']}, 'device': {'intra_threads': 32, 'blocktime': 0}}
+2019-11-13 16:48:45,001 INFO Saving job outputs to /global/cscratch1/sd/sfarrell/sc19-dl-tutorial/cifar10-resnet-N8-25792238
+2019-11-13 16:48:45.007836: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2019-11-13 16:48:45.074556: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1399990000 Hz
+2019-11-13 16:48:45.082744: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1400150000 Hz
+2019-11-13 16:48:45.084018: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1400085000 Hz
+2019-11-13 16:48:45.083821: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1400145000 Hz
+2019-11-13 16:48:45.084377: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1399975000 Hz
+2019-11-13 16:48:45.084743: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1399980000 Hz
+2019-11-13 16:48:45.085307: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1400145000 Hz
+2019-11-13 16:48:45.085074: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1399915000 Hz
+2019-11-13 16:48:45.147722: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5555565fd060 executing computations on platform Host. Devices:
+2019-11-13 16:48:45.147853: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-11-13 16:48:45.152643: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5555565fd060 executing computations on platform Host. Devices:
+2019-11-13 16:48:45.153416: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5555565fd060 executing computations on platform Host. Devices:
+2019-11-13 16:48:45.153657: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5555565fd060 executing computations on platform Host. Devices:
+2019-11-13 16:48:45.153688: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5555565fd060 executing computations on platform Host. Devices:
+2019-11-13 16:48:45.153534: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-11-13 16:48:45.153857: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5555565fd060 executing computations on platform Host. Devices:
+2019-11-13 16:48:45.153793: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-11-13 16:48:45.153822: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-11-13 16:48:45.153979: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-11-13 16:48:45.152777: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-11-13 16:48:45.155094: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5555565fd060 executing computations on platform Host. Devices:
+2019-11-13 16:48:45.156188: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5555565fd060 executing computations on platform Host. Devices:
+2019-11-13 16:48:45.155226: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-11-13 16:48:45.156330: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-11-13 16:48:49,734 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-11-13 16:48:49,743 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-11-13 16:48:49,759 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-11-13 16:48:49,761 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-11-13 16:48:49,772 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-11-13 16:48:49,772 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-11-13 16:48:49,779 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-11-13 16:48:49,782 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 32, 32, 3)    0                                            
+__________________________________________________________________________________________________
+conv1 (Conv2D)                  (None, 32, 32, 64)   1792        input_1[0][0]                    
+__________________________________________________________________________________________________
+bn_conv1 (BatchNormalization)   (None, 32, 32, 64)   256         conv1[0][0]                      
+__________________________________________________________________________________________________
+activation_1 (Activation)       (None, 32, 32, 64)   0           bn_conv1[0][0]                   
+__________________________________________________________________________________________________
+res2a_branch2a (Conv2D)         (None, 16, 16, 64)   4160        activation_1[0][0]               
+__________________________________________________________________________________________________
+bn2a_branch2a (BatchNormalizati (None, 16, 16, 64)   256         res2a_branch2a[0][0]             
+__________________________________________________________________________________________________
+activation_2 (Activation)       (None, 16, 16, 64)   0           bn2a_branch2a[0][0]              
+__________________________________________________________________________________________________
+res2a_branch2b (Conv2D)         (None, 16, 16, 64)   36928       activation_2[0][0]               
+__________________________________________________________________________________________________
+bn2a_branch2b (BatchNormalizati (None, 16, 16, 64)   256         res2a_branch2b[0][0]             
+__________________________________________________________________________________________________
+activation_3 (Activation)       (None, 16, 16, 64)   0           bn2a_branch2b[0][0]              
+__________________________________________________________________________________________________
+res2a_branch2c (Conv2D)         (None, 16, 16, 64)   4160        activation_3[0][0]               
+__________________________________________________________________________________________________
+res2a_branch1 (Conv2D)          (None, 16, 16, 64)   4160        activation_1[0][0]               
+__________________________________________________________________________________________________
+bn2a_branch2c (BatchNormalizati (None, 16, 16, 64)   256         res2a_branch2c[0][0]             
+__________________________________________________________________________________________________
+bn2a_branch1 (BatchNormalizatio (None, 16, 16, 64)   256         res2a_branch1[0][0]              
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 16, 16, 64)   0           bn2a_branch2c[0][0]              
+                                                                 bn2a_branch1[0][0]               
+__________________________________________________________________________________________________
+activation_4 (Activation)       (None, 16, 16, 64)   0           add_1[0][0]                      
+__________________________________________________________________________________________________
+res2b_branch2a (Conv2D)         (None, 16, 16, 64)   4160        activation_4[0][0]               
+__________________________________________________________________________________________________
+bn2b_branch2a (BatchNormalizati (None, 16, 16, 64)   256         res2b_branch2a[0][0]             
+__________________________________________________________________________________________________
+activation_5 (Activation)       (None, 16, 16, 64)   0           bn2b_branch2a[0][0]              
+__________________________________________________________________________________________________
+res2b_branch2b (Conv2D)         (None, 16, 16, 64)   36928       activation_5[0][0]               
+__________________________________________________________________________________________________
+bn2b_branch2b (BatchNormalizati (None, 16, 16, 64)   256         res2b_branch2b[0][0]             
+__________________________________________________________________________________________________
+activation_6 (Activation)       (None, 16, 16, 64)   0           bn2b_branch2b[0][0]              
+__________________________________________________________________________________________________
+res2b_branch2c (Conv2D)         (None, 16, 16, 64)   4160        activation_6[0][0]               
+__________________________________________________________________________________________________
+bn2b_branch2c (BatchNormalizati (None, 16, 16, 64)   256         res2b_branch2c[0][0]             
+__________________________________________________________________________________________________
+add_2 (Add)                     (None, 16, 16, 64)   0           bn2b_branch2c[0][0]              
+                                                                 activation_4[0][0]               
+__________________________________________________________________________________________________
+activation_7 (Activation)       (None, 16, 16, 64)   0           add_2[0][0]                      
+__________________________________________________________________________________________________
+res3a_branch2a (Conv2D)         (None, 8, 8, 128)    8320        activation_7[0][0]               
+__________________________________________________________________________________________________
+bn3a_branch2a (BatchNormalizati (None, 8, 8, 128)    512         res3a_branch2a[0][0]             
+__________________________________________________________________________________________________
+activation_8 (Activation)       (None, 8, 8, 128)    0           bn3a_branch2a[0][0]              
+__________________________________________________________________________________________________
+res3a_branch2b (Conv2D)         (None, 8, 8, 128)    147584      activation_8[0][0]               
+__________________________________________________________________________________________________
+bn3a_branch2b (BatchNormalizati (None, 8, 8, 128)    512         res3a_branch2b[0][0]             
+__________________________________________________________________________________________________
+activation_9 (Activation)       (None, 8, 8, 128)    0           bn3a_branch2b[0][0]              
+__________________________________________________________________________________________________
+res3a_branch2c (Conv2D)         (None, 8, 8, 128)    16512       activation_9[0][0]               
+__________________________________________________________________________________________________
+res3a_branch1 (Conv2D)          (None, 8, 8, 128)    8320        activation_7[0][0]               
+__________________________________________________________________________________________________
+bn3a_branch2c (BatchNormalizati (None, 8, 8, 128)    512         res3a_branch2c[0][0]             
+__________________________________________________________________________________________________
+bn3a_branch1 (BatchNormalizatio (None, 8, 8, 128)    512         res3a_branch1[0][0]              
+__________________________________________________________________________________________________
+add_3 (Add)                     (None, 8, 8, 128)    0           bn3a_branch2c[0][0]              
+                                                                 bn3a_branch1[0][0]               
+__________________________________________________________________________________________________
+activation_10 (Activation)      (None, 8, 8, 128)    0           add_3[0][0]                      
+__________________________________________________________________________________________________
+res3b_branch2a (Conv2D)         (None, 8, 8, 128)    16512       activation_10[0][0]              
+__________________________________________________________________________________________________
+bn3b_branch2a (BatchNormalizati (None, 8, 8, 128)    512         res3b_branch2a[0][0]             
+__________________________________________________________________________________________________
+activation_11 (Activation)      (None, 8, 8, 128)    0           bn3b_branch2a[0][0]              
+__________________________________________________________________________________________________
+res3b_branch2b (Conv2D)         (None, 8, 8, 128)    147584      activation_11[0][0]              
+__________________________________________________________________________________________________
+bn3b_branch2b (BatchNormalizati (None, 8, 8, 128)    512         res3b_branch2b[0][0]             
+__________________________________________________________________________________________________
+activation_12 (Activation)      (None, 8, 8, 128)    0           bn3b_branch2b[0][0]              
+__________________________________________________________________________________________________
+res3b_branch2c (Conv2D)         (None, 8, 8, 128)    16512       activation_12[0][0]              
+__________________________________________________________________________________________________
+bn3b_branch2c (BatchNormalizati (None, 8, 8, 128)    512         res3b_branch2c[0][0]             
+__________________________________________________________________________________________________
+add_4 (Add)                     (None, 8, 8, 128)    0           bn3b_branch2c[0][0]              
+                                                                 activation_10[0][0]              
+__________________________________________________________________________________________________
+activation_13 (Activation)      (None, 8, 8, 128)    0           add_4[0][0]                      
+__________________________________________________________________________________________________
+res4a_branch2a (Conv2D)         (None, 4, 4, 256)    33024       activation_13[0][0]              
+__________________________________________________________________________________________________
+bn4a_branch2a (BatchNormalizati (None, 4, 4, 256)    1024        res4a_branch2a[0][0]             
+__________________________________________________________________________________________________
+activation_14 (Activation)      (None, 4, 4, 256)    0           bn4a_branch2a[0][0]              
+__________________________________________________________________________________________________
+res4a_branch2b (Conv2D)         (None, 4, 4, 256)    590080      activation_14[0][0]              
+__________________________________________________________________________________________________
+bn4a_branch2b (BatchNormalizati (None, 4, 4, 256)    1024        res4a_branch2b[0][0]             
+__________________________________________________________________________________________________
+activation_15 (Activation)      (None, 4, 4, 256)    0           bn4a_branch2b[0][0]              
+__________________________________________________________________________________________________
+res4a_branch2c (Conv2D)         (None, 4, 4, 256)    65792       activation_15[0][0]              
+__________________________________________________________________________________________________
+res4a_branch1 (Conv2D)          (None, 4, 4, 256)    33024       activation_13[0][0]              
+__________________________________________________________________________________________________
+bn4a_branch2c (BatchNormalizati (None, 4, 4, 256)    1024        res4a_branch2c[0][0]             
+__________________________________________________________________________________________________
+bn4a_branch1 (BatchNormalizatio (None, 4, 4, 256)    1024        res4a_branch1[0][0]              
+__________________________________________________________________________________________________
+add_5 (Add)                     (None, 4, 4, 256)    0           bn4a_branch2c[0][0]              
+                                                                 bn4a_branch1[0][0]               
+__________________________________________________________________________________________________
+activation_16 (Activation)      (None, 4, 4, 256)    0           add_5[0][0]                      
+__________________________________________________________________________________________________
+res4b_branch2a (Conv2D)         (None, 4, 4, 256)    65792       activation_16[0][0]              
+__________________________________________________________________________________________________
+bn4b_branch2a (BatchNormalizati (None, 4, 4, 256)    1024        res4b_branch2a[0][0]             
+__________________________________________________________________________________________________
+activation_17 (Activation)      (None, 4, 4, 256)    0           bn4b_branch2a[0][0]              
+__________________________________________________________________________________________________
+res4b_branch2b (Conv2D)         (None, 4, 4, 256)    590080      activation_17[0][0]              
+__________________________________________________________________________________________________
+bn4b_branch2b (BatchNormalizati (None, 4, 4, 256)    1024        res4b_branch2b[0][0]             
+__________________________________________________________________________________________________
+activation_18 (Activation)      (None, 4, 4, 256)    0           bn4b_branch2b[0][0]              
+__________________________________________________________________________________________________
+res4b_branch2c (Conv2D)         (None, 4, 4, 256)    65792       activation_18[0][0]              
+__________________________________________________________________________________________________
+bn4b_branch2c (BatchNormalizati (None, 4, 4, 256)    1024        res4b_branch2c[0][0]             
+__________________________________________________________________________________________________
+add_6 (Add)                     (None, 4, 4, 256)    0           bn4b_branch2c[0][0]              
+                                                                 activation_16[0][0]              
+__________________________________________________________________________________________________
+activation_19 (Activation)      (None, 4, 4, 256)    0           add_6[0][0]                      
+__________________________________________________________________________________________________
+res5a_branch2a (Conv2D)         (None, 2, 2, 512)    131584      activation_19[0][0]              
+__________________________________________________________________________________________________
+bn5a_branch2a (BatchNormalizati (None, 2, 2, 512)    2048        res5a_branch2a[0][0]             
+__________________________________________________________________________________________________
+activation_20 (Activation)      (None, 2, 2, 512)    0           bn5a_branch2a[0][0]              
+__________________________________________________________________________________________________
+res5a_branch2b (Conv2D)         (None, 2, 2, 512)    2359808     activation_20[0][0]              
+__________________________________________________________________________________________________
+bn5a_branch2b (BatchNormalizati (None, 2, 2, 512)    2048        res5a_branch2b[0][0]             
+__________________________________________________________________________________________________
+activation_21 (Activation)      (None, 2, 2, 512)    0           bn5a_branch2b[0][0]              
+__________________________________________________________________________________________________
+res5a_branch2c (Conv2D)         (None, 2, 2, 512)    262656      activation_21[0][0]              
+__________________________________________________________________________________________________
+res5a_branch1 (Conv2D)          (None, 2, 2, 512)    131584      activation_19[0][0]              
+__________________________________________________________________________________________________
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-11-13 16:49:24,104 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-11-13 16:49:24,288 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-11-13 16:49:24,300 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-11-13 16:49:24,323 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-11-13 16:49:24,335 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-11-13 16:49:24,388 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-11-13 16:49:24,435 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-11-13 16:49:24,475 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-11-13 16:49:32,056 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-11-13 16:49:32,293 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-11-13 16:49:32,296 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-11-13 16:49:32,345 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-11-13 16:49:32,356 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-11-13 16:49:32,401 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-11-13 16:49:32,451 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-11-13 16:49:32,499 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+bn5a_branch2c (BatchNormalizati (None, 2, 2, 512)    2048        res5a_branch2c[0][0]             
+__________________________________________________________________________________________________
+bn5a_branch1 (BatchNormalizatio (None, 2, 2, 512)    2048        res5a_branch1[0][0]              
+__________________________________________________________________________________________________
+add_7 (Add)                     (None, 2, 2, 512)    0           bn5a_branch2c[0][0]              
+                                                                 bn5a_branch1[0][0]               
+__________________________________________________________________________________________________
+activation_22 (Activation)      (None, 2, 2, 512)    0           add_7[0][0]                      
+__________________________________________________________________________________________________
+res5b_branch2a (Conv2D)         (None, 2, 2, 512)    262656      activation_22[0][0]              
+__________________________________________________________________________________________________
+bn5b_branch2a (BatchNormalizati (None, 2, 2, 512)    2048        res5b_branch2a[0][0]             
+__________________________________________________________________________________________________
+activation_23 (Activation)      (None, 2, 2, 512)    0           bn5b_branch2a[0][0]              
+__________________________________________________________________________________________________
+res5b_branch2b (Conv2D)         (None, 2, 2, 512)    2359808     activation_23[0][0]              
+__________________________________________________________________________________________________
+bn5b_branch2b (BatchNormalizati (None, 2, 2, 512)    2048        res5b_branch2b[0][0]             
+__________________________________________________________________________________________________
+activation_24 (Activation)      (None, 2, 2, 512)    0           bn5b_branch2b[0][0]              
+__________________________________________________________________________________________________
+res5b_branch2c (Conv2D)         (None, 2, 2, 512)    262656      activation_24[0][0]              
+__________________________________________________________________________________________________
+bn5b_branch2c (BatchNormalizati (None, 2, 2, 512)    2048        res5b_branch2c[0][0]             
+__________________________________________________________________________________________________
+add_8 (Add)                     (None, 2, 2, 512)    0           bn5b_branch2c[0][0]              
+                                                                 activation_22[0][0]              
+__________________________________________________________________________________________________
+activation_25 (Activation)      (None, 2, 2, 512)    0           add_8[0][0]                      
+__________________________________________________________________________________________________
+avg_pool (GlobalAveragePooling2 (None, 512)          0           activation_25[0][0]              
+__________________________________________________________________________________________________
+fc1000 (Dense)                  (None, 10)           5130        avg_pool[0][0]                   
+==================================================================================================
+Total params: 7,704,394
+Trainable params: 7,690,826
+Non-trainable params: 13,568
+__________________________________________________________________________________________________
+Epoch 1/32
+ - 174s - loss: 2.6844 - acc: 0.2759 - val_loss: 2.5136 - val_acc: 0.3586
+Epoch 2/32
+ - 38s - loss: 2.3228 - acc: 0.4109 - val_loss: 2.2712 - val_acc: 0.4367
+Epoch 3/32
+ - 37s - loss: 2.1374 - acc: 0.4612 - val_loss: 2.0731 - val_acc: 0.5008
+Epoch 4/32
+ - 35s - loss: 2.0078 - acc: 0.5106 - val_loss: 2.0221 - val_acc: 0.5329
+Epoch 5/32
+ - 35s - loss: 1.9103 - acc: 0.5507 - val_loss: 2.0130 - val_acc: 0.5337
+
+Epoch 5: finished gradual learning rate warmup to 0.0008.
+Epoch 6/32
+ - 34s - loss: 1.8197 - acc: 0.5833 - val_loss: 1.8510 - val_acc: 0.5863
+Epoch 7/32
+ - 35s - loss: 1.6915 - acc: 0.6224 - val_loss: 1.8517 - val_acc: 0.5641
+Epoch 8/32
+ - 35s - loss: 1.6378 - acc: 0.6340 - val_loss: 1.6502 - val_acc: 0.6332
+Epoch 9/32
+ - 34s - loss: 1.5585 - acc: 0.6601 - val_loss: 1.7221 - val_acc: 0.6139
+Epoch 10/32
+ - 34s - loss: 1.5230 - acc: 0.6695 - val_loss: 1.7451 - val_acc: 0.6151
+Epoch 11/32
+ - 34s - loss: 1.4444 - acc: 0.6993 - val_loss: 1.6942 - val_acc: 0.6225
+Epoch 12/32
+ - 34s - loss: 1.3990 - acc: 0.7033 - val_loss: 1.5230 - val_acc: 0.6776
+Epoch 13/32
+ - 35s - loss: 1.3188 - acc: 0.7303 - val_loss: 1.4569 - val_acc: 0.6817
+Epoch 14/32
+ - 34s - loss: 1.2867 - acc: 0.7407 - val_loss: 1.5201 - val_acc: 0.6875
+Epoch 15/32
+ - 34s - loss: 1.2525 - acc: 0.7468 - val_loss: 1.4897 - val_acc: 0.6760
+Epoch 16/32
+ - 34s - loss: 1.2075 - acc: 0.7627 - val_loss: 1.2780 - val_acc: 0.7401
+Epoch 17/32
+ - 35s - loss: 1.1533 - acc: 0.7743 - val_loss: 1.3750 - val_acc: 0.6978
+Epoch 18/32
+ - 35s - loss: 1.1343 - acc: 0.7777 - val_loss: 1.2586 - val_acc: 0.7418
+Epoch 19/32
+ - 34s - loss: 1.0797 - acc: 0.7969 - val_loss: 1.3009 - val_acc: 0.7434
+Epoch 20/32
+ - 34s - loss: 1.0625 - acc: 0.8006 - val_loss: 1.2645 - val_acc: 0.7368
+Epoch 21/32
+ - 34s - loss: 1.0053 - acc: 0.8183 - val_loss: 1.1778 - val_acc: 0.7656
+Epoch 22/32
+ - 34s - loss: 0.9736 - acc: 0.8236 - val_loss: 1.1832 - val_acc: 0.7640
+Epoch 23/32
+ - 35s - loss: 0.9682 - acc: 0.8246 - val_loss: 1.1552 - val_acc: 0.7656
+Epoch 24/32
+ - 34s - loss: 0.9663 - acc: 0.8209 - val_loss: 1.1829 - val_acc: 0.7623
+Epoch 25/32
+ - 34s - loss: 0.9081 - acc: 0.8420 - val_loss: 1.1996 - val_acc: 0.7483
+Epoch 26/32
+ - 34s - loss: 0.9099 - acc: 0.8346 - val_loss: 1.1574 - val_acc: 0.7697
+Epoch 27/32
+ - 34s - loss: 0.8759 - acc: 0.8491 - val_loss: 1.2273 - val_acc: 0.7418
+Epoch 28/32
+ - 34s - loss: 0.8688 - acc: 0.8478 - val_loss: 1.0259 - val_acc: 0.8141
+Epoch 29/32
+ - 34s - loss: 0.8445 - acc: 0.8484 - val_loss: 1.2405 - val_acc: 0.7401
+Epoch 30/32
+ - 34s - loss: 0.8175 - acc: 0.8600 - val_loss: 1.1150 - val_acc: 0.7706
+Epoch 31/32
+ - 34s - loss: 0.8187 - acc: 0.8637 - val_loss: 1.0831 - val_acc: 0.7845
+Epoch 32/32
+ - 34s - loss: 0.7993 - acc: 0.8642 - val_loss: 1.0813 - val_acc: 0.7952
+
+Epoch 5: finished gradual learning rate warmup to 0.0008.
+
+Epoch 5: finished gradual learning rate warmup to 0.0008.
+
+Epoch 5: finished gradual learning rate warmup to 0.0008.
+
+Epoch 5: finished gradual learning rate warmup to 0.0008.
+
+Epoch 5: finished gradual learning rate warmup to 0.0008.
+
+Epoch 5: finished gradual learning rate warmup to 0.0008.
+
+Epoch 5: finished gradual learning rate warmup to 0.0008.
+2019-11-13 17:14:43,598 INFO Best validation accuracy: 0.795
+2019-11-13 17:14:43,601 INFO Average time per epoch [s]: 44.987
+2019-11-13 17:14:43,657 INFO All done!
+Epoch time: 44.987020403146744

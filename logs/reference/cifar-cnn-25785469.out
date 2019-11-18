@@ -1,0 +1,97 @@
+Using TensorFlow backend.
+Using TensorFlow backend.
+2019-11-13 12:46:18,804 INFO Initialized rank 0 out of 1
+2019-11-13 12:46:18,805 INFO Job configuration: {'output_dir': '$SCRATCH/sc19-dl-tutorial/cifar-cnn-N${SLURM_JOB_NUM_NODES}-${SLURM_JOB_ID}', 'data': {'name': 'cifar10'}, 'model': {'name': 'cnn', 'input_shape': [32, 32, 3], 'n_classes': 10, 'dropout': 0.1}, 'optimizer': {'name': 'Adam', 'lr': 0.001}, 'training': {'batch_size': 512, 'n_epochs': 16, 'lr_warmup_epochs': 5, 'loss': 'categorical_crossentropy', 'metrics': ['accuracy']}, 'device': {'intra_threads': 33, 'inter_threads': 1, 'blocktime': 0}}
+2019-11-13 12:46:18,805 INFO Saving job outputs to /global/cscratch1/sd/sfarrell/sc19-dl-tutorial/cifar-cnn-N1-25785469
+2019-11-13 12:46:18.810798: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2019-11-13 12:46:18.877635: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1399985000 Hz
+2019-11-13 12:46:18.947426: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5555565f9d00 executing computations on platform Host. Devices:
+2019-11-13 12:46:18.947573: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-11-13 12:46:23,705 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2019-11-13 12:46:24,108 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-11-13 12:46:24,692 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 32, 32, 16)        448       
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 16, 16, 16)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 16, 16, 32)        4640      
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 8, 8, 32)          0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 8, 8, 64)          18496     
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 4, 4, 64)          0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 1024)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 128)               131200    
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 128)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 10)                1290      
+=================================================================
+Total params: 156,074
+Trainable params: 156,074
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/16
+ - 89s - loss: 1.9173 - acc: 0.2980 - val_loss: 1.6662 - val_acc: 0.4036
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-11-13 12:48:01,166 WARNING From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/horovod/tensorflow/__init__.py:86: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+Epoch 2/16
+ - 78s - loss: 1.6127 - acc: 0.4172 - val_loss: 1.5186 - val_acc: 0.4595
+Epoch 3/16
+ - 82s - loss: 1.5170 - acc: 0.4517 - val_loss: 1.4431 - val_acc: 0.4820
+Epoch 4/16
+ - 83s - loss: 1.4371 - acc: 0.4872 - val_loss: 1.3008 - val_acc: 0.5334
+Epoch 5/16
+ - 83s - loss: 1.3775 - acc: 0.5063 - val_loss: 1.2889 - val_acc: 0.5383
+
+Epoch 5: finished gradual learning rate warmup to 0.001.
+Epoch 6/16
+ - 83s - loss: 1.3300 - acc: 0.5255 - val_loss: 1.2231 - val_acc: 0.5638
+Epoch 7/16
+ - 83s - loss: 1.2928 - acc: 0.5407 - val_loss: 1.2037 - val_acc: 0.5776
+Epoch 8/16
+ - 83s - loss: 1.2677 - acc: 0.5489 - val_loss: 1.1607 - val_acc: 0.5962
+Epoch 9/16
+ - 83s - loss: 1.2263 - acc: 0.5665 - val_loss: 1.1232 - val_acc: 0.6049
+Epoch 10/16
+ - 83s - loss: 1.1957 - acc: 0.5750 - val_loss: 1.1827 - val_acc: 0.5814
+Epoch 11/16
+ - 84s - loss: 1.1714 - acc: 0.5848 - val_loss: 1.1436 - val_acc: 0.5947
+Epoch 12/16
+ - 82s - loss: 1.1568 - acc: 0.5921 - val_loss: 1.0506 - val_acc: 0.6270
+Epoch 13/16
+ - 83s - loss: 1.1283 - acc: 0.5995 - val_loss: 1.0474 - val_acc: 0.6295
+Epoch 14/16
+ - 84s - loss: 1.1109 - acc: 0.6075 - val_loss: 1.0292 - val_acc: 0.6366
+Epoch 15/16
+ - 83s - loss: 1.0944 - acc: 0.6135 - val_loss: 1.0033 - val_acc: 0.6444
+Epoch 16/16
+ - 83s - loss: 1.0786 - acc: 0.6174 - val_loss: 0.9982 - val_acc: 0.6495
+2019-11-13 13:08:54,284 INFO Best validation accuracy: 0.650
+2019-11-13 13:08:54,290 INFO Average time per epoch: 83.917 s
+2019-11-13 13:08:54,386 INFO All done!
