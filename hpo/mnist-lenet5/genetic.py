@@ -27,7 +27,8 @@ print("------------------------------------------------------------")
 evaluator = hpo.Evaluator('python3 {0}/mnist.py'.format(src_path),
                           run_path=run_path,
                           src_path=src_path,
-                          nodes=args.num_nodes)
+                          nodes=args.num_nodes,
+                          verbose=args.verbose)
 
 optimizer = hpo.GeneticOptimizer(evaluator,
                                  generations=args.generations,
