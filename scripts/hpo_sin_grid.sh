@@ -13,4 +13,4 @@ module load cray-hpo
 script=grid_example.py
 path=hpo/sin
 
-cd $path && python $script
+cd $path && python -u $script
