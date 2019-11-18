@@ -12,7 +12,7 @@ run_path = path.join(pwd, 'run')
 
 argparser = argparse.ArgumentParser()
 argparser.add_argument('-N', '--num_nodes', type=int, default=1)
-argparser.add_argument('--generations', type=int, default=4)
+argparser.add_argument('--generations', type=int, default=3)
 argparser.add_argument('--num_demes', type=int, default=1)
 argparser.add_argument('--pop_size', type=int, default=8)
 argparser.add_argument('--mutation_rate', type=float, default=0.5)
