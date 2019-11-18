@@ -3,8 +3,8 @@
 #SBATCH --reservation dl4sci_sc19
 #SBATCH -C knl
 #SBATCH -N 1
-#SBATCH -q debug
-#SBATCH -t 30
+#SBATCH -q regular
+#SBATCH -t 1:00:00
 #SBATCH -o logs/%x-%j.out
 
 # Load the software
