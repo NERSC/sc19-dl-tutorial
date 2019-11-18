@@ -2,8 +2,8 @@
 #SBATCH -J hpo-mnist-lenet5
 #SBATCH --reservation dl4sci_sc19
 #SBATCH -C knl
-#SBATCH -N 4
-#SBATCH -q debug
+#SBATCH -N 8
+#SBATCH -q regular
 #SBATCH -t 1:00:00
 #SBATCH -o logs/%x-%j.out
 

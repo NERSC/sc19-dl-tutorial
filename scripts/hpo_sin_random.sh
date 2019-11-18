@@ -3,7 +3,7 @@
 #SBATCH --reservation dl4sci_sc19
 #SBATCH -C knl
 #SBATCH -N 1
-#SBATCH -q debug
+#SBATCH -q regular
 #SBATCH -t 5
 #SBATCH -o logs/%x-%j.out
 
