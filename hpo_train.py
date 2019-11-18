@@ -32,8 +32,8 @@ def main():
                          ['--dropout', 0.1, (0.0, 0.5)]])
 
 
-    # Set up genetic optimizer with 16 evaluations/generation and 3 generations
-    optimizer = hpo.GeneticOptimizer(evaluator, generations=3, pop_size=16,
+    # Set up genetic optimizer with 8 evaluations/generation and 3 generations
+    optimizer = hpo.GeneticOptimizer(evaluator, generations=4, pop_size=8,
                                      num_demes=1, mutation_rate=0.6,
                                      verbose=args.verbose)
 
