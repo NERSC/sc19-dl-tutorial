@@ -1,0 +1,880 @@
+WARNING:tensorflow:From mnist.py:38: read_data_sets (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use alternatives such as official/mnist/dataset.py from tensorflow/models.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py:260: maybe_download (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please write your own downloading logic.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py:262: extract_images (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use tf.data to implement this functionality.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py:267: extract_labels (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use tf.data to implement this functionality.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py:110: dense_to_one_hot (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use tf.one_hot on tensors.
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py:290: DataSet.__init__ (from tensorflow.contrib.learn.python.learn.datasets.mnist) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use alternatives such as official/mnist/dataset.py from tensorflow/models.
+OMP: Info #212: KMP_AFFINITY: decoding x2APIC ids.
+OMP: Info #210: KMP_AFFINITY: Affinity capable, using global cpuid leaf 11 info
+OMP: Info #154: KMP_AFFINITY: Initial OS proc set respected: 0-271
+OMP: Info #156: KMP_AFFINITY: 272 available OS procs
+OMP: Info #157: KMP_AFFINITY: Uniform topology
+OMP: Info #179: KMP_AFFINITY: 1 packages x 68 cores/pkg x 4 threads/core (68 total cores)
+OMP: Info #214: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to package 0 core 0 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 68 maps to package 0 core 0 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 136 maps to package 0 core 0 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 204 maps to package 0 core 0 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to package 0 core 1 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 69 maps to package 0 core 1 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 137 maps to package 0 core 1 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 205 maps to package 0 core 1 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to package 0 core 4 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 70 maps to package 0 core 4 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 138 maps to package 0 core 4 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 206 maps to package 0 core 4 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to package 0 core 5 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 71 maps to package 0 core 5 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 139 maps to package 0 core 5 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 207 maps to package 0 core 5 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 4 maps to package 0 core 6 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 72 maps to package 0 core 6 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 140 maps to package 0 core 6 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 208 maps to package 0 core 6 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 5 maps to package 0 core 7 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 73 maps to package 0 core 7 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 141 maps to package 0 core 7 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 209 maps to package 0 core 7 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 6 maps to package 0 core 8 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 74 maps to package 0 core 8 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 142 maps to package 0 core 8 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 210 maps to package 0 core 8 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 7 maps to package 0 core 9 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 75 maps to package 0 core 9 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 143 maps to package 0 core 9 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 211 maps to package 0 core 9 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 8 maps to package 0 core 10 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 76 maps to package 0 core 10 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 144 maps to package 0 core 10 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 212 maps to package 0 core 10 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 9 maps to package 0 core 11 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 77 maps to package 0 core 11 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 145 maps to package 0 core 11 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 213 maps to package 0 core 11 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 10 maps to package 0 core 12 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 78 maps to package 0 core 12 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 146 maps to package 0 core 12 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 214 maps to package 0 core 12 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 11 maps to package 0 core 13 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 79 maps to package 0 core 13 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 147 maps to package 0 core 13 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 215 maps to package 0 core 13 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 12 maps to package 0 core 14 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 80 maps to package 0 core 14 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 148 maps to package 0 core 14 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 216 maps to package 0 core 14 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 13 maps to package 0 core 15 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 81 maps to package 0 core 15 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 149 maps to package 0 core 15 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 217 maps to package 0 core 15 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 14 maps to package 0 core 18 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 82 maps to package 0 core 18 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 150 maps to package 0 core 18 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 218 maps to package 0 core 18 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 15 maps to package 0 core 19 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 83 maps to package 0 core 19 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 151 maps to package 0 core 19 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 219 maps to package 0 core 19 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 16 maps to package 0 core 20 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 84 maps to package 0 core 20 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 152 maps to package 0 core 20 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 220 maps to package 0 core 20 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 17 maps to package 0 core 21 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 85 maps to package 0 core 21 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 153 maps to package 0 core 21 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 221 maps to package 0 core 21 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 18 maps to package 0 core 22 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 86 maps to package 0 core 22 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 154 maps to package 0 core 22 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 222 maps to package 0 core 22 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 19 maps to package 0 core 23 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 87 maps to package 0 core 23 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 155 maps to package 0 core 23 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 223 maps to package 0 core 23 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 20 maps to package 0 core 24 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 88 maps to package 0 core 24 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 156 maps to package 0 core 24 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 224 maps to package 0 core 24 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 21 maps to package 0 core 25 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 89 maps to package 0 core 25 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 157 maps to package 0 core 25 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 225 maps to package 0 core 25 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 22 maps to package 0 core 26 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 90 maps to package 0 core 26 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 158 maps to package 0 core 26 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 226 maps to package 0 core 26 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 23 maps to package 0 core 27 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 91 maps to package 0 core 27 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 159 maps to package 0 core 27 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 227 maps to package 0 core 27 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 24 maps to package 0 core 28 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 92 maps to package 0 core 28 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 160 maps to package 0 core 28 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 228 maps to package 0 core 28 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 25 maps to package 0 core 29 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 93 maps to package 0 core 29 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 161 maps to package 0 core 29 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 229 maps to package 0 core 29 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 26 maps to package 0 core 30 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 94 maps to package 0 core 30 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 162 maps to package 0 core 30 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 230 maps to package 0 core 30 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 27 maps to package 0 core 31 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 95 maps to package 0 core 31 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 163 maps to package 0 core 31 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 231 maps to package 0 core 31 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 28 maps to package 0 core 32 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 96 maps to package 0 core 32 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 164 maps to package 0 core 32 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 232 maps to package 0 core 32 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 29 maps to package 0 core 33 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 97 maps to package 0 core 33 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 165 maps to package 0 core 33 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 233 maps to package 0 core 33 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 30 maps to package 0 core 34 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 98 maps to package 0 core 34 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 166 maps to package 0 core 34 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 234 maps to package 0 core 34 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 31 maps to package 0 core 35 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 99 maps to package 0 core 35 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 167 maps to package 0 core 35 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 235 maps to package 0 core 35 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 32 maps to package 0 core 36 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 100 maps to package 0 core 36 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 168 maps to package 0 core 36 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 236 maps to package 0 core 36 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 33 maps to package 0 core 37 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 101 maps to package 0 core 37 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 169 maps to package 0 core 37 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 237 maps to package 0 core 37 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 34 maps to package 0 core 38 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 102 maps to package 0 core 38 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 170 maps to package 0 core 38 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 238 maps to package 0 core 38 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 35 maps to package 0 core 39 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 103 maps to package 0 core 39 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 171 maps to package 0 core 39 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 239 maps to package 0 core 39 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 36 maps to package 0 core 40 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 104 maps to package 0 core 40 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 172 maps to package 0 core 40 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 240 maps to package 0 core 40 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 37 maps to package 0 core 41 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 105 maps to package 0 core 41 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 173 maps to package 0 core 41 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 241 maps to package 0 core 41 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 38 maps to package 0 core 42 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 106 maps to package 0 core 42 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 174 maps to package 0 core 42 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 242 maps to package 0 core 42 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 39 maps to package 0 core 43 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 107 maps to package 0 core 43 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 175 maps to package 0 core 43 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 243 maps to package 0 core 43 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 40 maps to package 0 core 46 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 108 maps to package 0 core 46 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 176 maps to package 0 core 46 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 244 maps to package 0 core 46 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 41 maps to package 0 core 47 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 109 maps to package 0 core 47 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 177 maps to package 0 core 47 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 245 maps to package 0 core 47 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 42 maps to package 0 core 48 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 110 maps to package 0 core 48 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 178 maps to package 0 core 48 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 246 maps to package 0 core 48 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 43 maps to package 0 core 49 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 111 maps to package 0 core 49 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 179 maps to package 0 core 49 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 247 maps to package 0 core 49 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 44 maps to package 0 core 50 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 112 maps to package 0 core 50 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 180 maps to package 0 core 50 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 248 maps to package 0 core 50 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 45 maps to package 0 core 51 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 113 maps to package 0 core 51 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 181 maps to package 0 core 51 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 249 maps to package 0 core 51 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 46 maps to package 0 core 52 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 114 maps to package 0 core 52 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 182 maps to package 0 core 52 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 250 maps to package 0 core 52 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 47 maps to package 0 core 53 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 115 maps to package 0 core 53 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 183 maps to package 0 core 53 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 251 maps to package 0 core 53 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 48 maps to package 0 core 56 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 116 maps to package 0 core 56 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 184 maps to package 0 core 56 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 252 maps to package 0 core 56 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 49 maps to package 0 core 57 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 117 maps to package 0 core 57 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 185 maps to package 0 core 57 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 253 maps to package 0 core 57 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 50 maps to package 0 core 58 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 118 maps to package 0 core 58 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 186 maps to package 0 core 58 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 254 maps to package 0 core 58 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 51 maps to package 0 core 59 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 119 maps to package 0 core 59 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 187 maps to package 0 core 59 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 255 maps to package 0 core 59 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 52 maps to package 0 core 60 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 120 maps to package 0 core 60 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 188 maps to package 0 core 60 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 256 maps to package 0 core 60 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 53 maps to package 0 core 61 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 121 maps to package 0 core 61 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 189 maps to package 0 core 61 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 257 maps to package 0 core 61 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 54 maps to package 0 core 62 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 122 maps to package 0 core 62 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 190 maps to package 0 core 62 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 258 maps to package 0 core 62 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 55 maps to package 0 core 63 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 123 maps to package 0 core 63 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 191 maps to package 0 core 63 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 259 maps to package 0 core 63 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 56 maps to package 0 core 64 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 124 maps to package 0 core 64 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 192 maps to package 0 core 64 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 260 maps to package 0 core 64 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 57 maps to package 0 core 65 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 125 maps to package 0 core 65 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 193 maps to package 0 core 65 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 261 maps to package 0 core 65 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 58 maps to package 0 core 66 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 126 maps to package 0 core 66 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 194 maps to package 0 core 66 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 262 maps to package 0 core 66 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 59 maps to package 0 core 67 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 127 maps to package 0 core 67 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 195 maps to package 0 core 67 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 263 maps to package 0 core 67 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 60 maps to package 0 core 68 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 128 maps to package 0 core 68 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 196 maps to package 0 core 68 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 264 maps to package 0 core 68 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 61 maps to package 0 core 69 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 129 maps to package 0 core 69 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 197 maps to package 0 core 69 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 265 maps to package 0 core 69 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 62 maps to package 0 core 70 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 130 maps to package 0 core 70 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 198 maps to package 0 core 70 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 266 maps to package 0 core 70 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 63 maps to package 0 core 71 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 131 maps to package 0 core 71 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 199 maps to package 0 core 71 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 267 maps to package 0 core 71 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 64 maps to package 0 core 72 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 132 maps to package 0 core 72 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 200 maps to package 0 core 72 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 268 maps to package 0 core 72 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 65 maps to package 0 core 73 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 133 maps to package 0 core 73 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 201 maps to package 0 core 73 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 269 maps to package 0 core 73 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 66 maps to package 0 core 74 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 134 maps to package 0 core 74 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 202 maps to package 0 core 74 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 270 maps to package 0 core 74 thread 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 67 maps to package 0 core 75 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 135 maps to package 0 core 75 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 203 maps to package 0 core 75 thread 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 271 maps to package 0 core 75 thread 3 
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45699 thread 0 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45720 thread 2 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45719 thread 1 bound to OS proc set 1
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45721 thread 3 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45722 thread 4 bound to OS proc set 4
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45723 thread 5 bound to OS proc set 5
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45724 thread 6 bound to OS proc set 6
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45726 thread 8 bound to OS proc set 8
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45725 thread 7 bound to OS proc set 7
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45728 thread 10 bound to OS proc set 10
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45727 thread 9 bound to OS proc set 9
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45729 thread 11 bound to OS proc set 11
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45731 thread 13 bound to OS proc set 13
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45730 thread 12 bound to OS proc set 12
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45732 thread 14 bound to OS proc set 14
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45733 thread 15 bound to OS proc set 15
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45734 thread 16 bound to OS proc set 16
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45735 thread 17 bound to OS proc set 17
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45736 thread 18 bound to OS proc set 18
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45737 thread 19 bound to OS proc set 19
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45738 thread 20 bound to OS proc set 20
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45739 thread 21 bound to OS proc set 21
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45740 thread 22 bound to OS proc set 22
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45741 thread 23 bound to OS proc set 23
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45742 thread 24 bound to OS proc set 24
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45743 thread 25 bound to OS proc set 25
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45744 thread 26 bound to OS proc set 26
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45745 thread 27 bound to OS proc set 27
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45746 thread 28 bound to OS proc set 28
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45747 thread 29 bound to OS proc set 29
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45748 thread 30 bound to OS proc set 30
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45749 thread 31 bound to OS proc set 31
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45750 thread 32 bound to OS proc set 32
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45751 thread 33 bound to OS proc set 33
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45752 thread 34 bound to OS proc set 34
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45753 thread 35 bound to OS proc set 35
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45754 thread 36 bound to OS proc set 36
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45755 thread 37 bound to OS proc set 37
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45756 thread 38 bound to OS proc set 38
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45757 thread 39 bound to OS proc set 39
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45758 thread 40 bound to OS proc set 40
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45759 thread 41 bound to OS proc set 41
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45760 thread 42 bound to OS proc set 42
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45761 thread 43 bound to OS proc set 43
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45762 thread 44 bound to OS proc set 44
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45763 thread 45 bound to OS proc set 45
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45764 thread 46 bound to OS proc set 46
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45765 thread 47 bound to OS proc set 47
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45767 thread 49 bound to OS proc set 49
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45766 thread 48 bound to OS proc set 48
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45769 thread 51 bound to OS proc set 51
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45768 thread 50 bound to OS proc set 50
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45770 thread 52 bound to OS proc set 52
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45771 thread 53 bound to OS proc set 53
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45772 thread 54 bound to OS proc set 54
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45773 thread 55 bound to OS proc set 55
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45774 thread 56 bound to OS proc set 56
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45775 thread 57 bound to OS proc set 57
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45776 thread 58 bound to OS proc set 58
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45777 thread 59 bound to OS proc set 59
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45778 thread 60 bound to OS proc set 60
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45779 thread 61 bound to OS proc set 61
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45780 thread 62 bound to OS proc set 62
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45781 thread 63 bound to OS proc set 63
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45782 thread 64 bound to OS proc set 64
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45783 thread 65 bound to OS proc set 65
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45785 thread 67 bound to OS proc set 67
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45784 thread 66 bound to OS proc set 66
+WARNING:tensorflow:From /usr/common/software/tensorflow/intel-tensorflow/1.13.1-py36/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-11-18 09:22:50.826834: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2019-11-18 09:22:50.846944: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1399940000 Hz
+2019-11-18 09:22:50.847704: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55555719baf0 executing computations on platform Host. Devices:
+2019-11-18 09:22:50.847956: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-11-18 09:22:50.848573: I tensorflow/core/common_runtime/process_util.cc:71] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+WARNING:tensorflow:From mnist.py:90: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From mnist.py:98: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See `tf.nn.softmax_cross_entropy_with_logits_v2`.
+
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45792 thread 68 bound to OS proc set 68
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45813 thread 69 bound to OS proc set 69
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45814 thread 70 bound to OS proc set 70
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45815 thread 71 bound to OS proc set 71
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45816 thread 72 bound to OS proc set 72
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45818 thread 74 bound to OS proc set 74
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45817 thread 73 bound to OS proc set 73
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45819 thread 75 bound to OS proc set 75
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45820 thread 76 bound to OS proc set 76
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45821 thread 77 bound to OS proc set 77
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45822 thread 78 bound to OS proc set 78
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45824 thread 80 bound to OS proc set 80
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45823 thread 79 bound to OS proc set 79
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45826 thread 82 bound to OS proc set 82
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45825 thread 81 bound to OS proc set 81
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45827 thread 83 bound to OS proc set 83
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45828 thread 84 bound to OS proc set 84
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45829 thread 85 bound to OS proc set 85
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45830 thread 86 bound to OS proc set 86
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45831 thread 87 bound to OS proc set 87
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45832 thread 88 bound to OS proc set 88
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45833 thread 89 bound to OS proc set 89
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45834 thread 90 bound to OS proc set 90
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45835 thread 91 bound to OS proc set 91
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45836 thread 92 bound to OS proc set 92
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45837 thread 93 bound to OS proc set 93
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45838 thread 94 bound to OS proc set 94
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45839 thread 95 bound to OS proc set 95
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45840 thread 96 bound to OS proc set 96
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45841 thread 97 bound to OS proc set 97
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45842 thread 98 bound to OS proc set 98
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45843 thread 99 bound to OS proc set 99
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45844 thread 100 bound to OS proc set 100
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45845 thread 101 bound to OS proc set 101
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45846 thread 102 bound to OS proc set 102
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45847 thread 103 bound to OS proc set 103
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45848 thread 104 bound to OS proc set 104
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45849 thread 105 bound to OS proc set 105
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45850 thread 106 bound to OS proc set 106
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45851 thread 107 bound to OS proc set 107
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45852 thread 108 bound to OS proc set 108
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45853 thread 109 bound to OS proc set 109
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45854 thread 110 bound to OS proc set 110
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45855 thread 111 bound to OS proc set 111
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45856 thread 112 bound to OS proc set 112
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45857 thread 113 bound to OS proc set 113
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45858 thread 114 bound to OS proc set 114
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45859 thread 115 bound to OS proc set 115
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45860 thread 116 bound to OS proc set 116
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45861 thread 117 bound to OS proc set 117
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45862 thread 118 bound to OS proc set 118
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45863 thread 119 bound to OS proc set 119
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45864 thread 120 bound to OS proc set 120
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45865 thread 121 bound to OS proc set 121
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45866 thread 122 bound to OS proc set 122
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45867 thread 123 bound to OS proc set 123
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45868 thread 124 bound to OS proc set 124
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45869 thread 125 bound to OS proc set 125
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45870 thread 126 bound to OS proc set 126
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45871 thread 127 bound to OS proc set 127
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45872 thread 128 bound to OS proc set 128
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45873 thread 129 bound to OS proc set 129
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45874 thread 130 bound to OS proc set 130
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45875 thread 131 bound to OS proc set 131
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45876 thread 132 bound to OS proc set 132
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45877 thread 133 bound to OS proc set 133
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45878 thread 134 bound to OS proc set 134
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45879 thread 135 bound to OS proc set 135
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45880 thread 136 bound to OS proc set 136
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45881 thread 137 bound to OS proc set 137
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45882 thread 138 bound to OS proc set 138
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45883 thread 139 bound to OS proc set 139
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45884 thread 140 bound to OS proc set 140
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45885 thread 141 bound to OS proc set 141
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45886 thread 142 bound to OS proc set 142
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45887 thread 143 bound to OS proc set 143
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45888 thread 144 bound to OS proc set 144
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45889 thread 145 bound to OS proc set 145
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45890 thread 146 bound to OS proc set 146
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45891 thread 147 bound to OS proc set 147
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45892 thread 148 bound to OS proc set 148
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45893 thread 149 bound to OS proc set 149
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45894 thread 150 bound to OS proc set 150
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45895 thread 151 bound to OS proc set 151
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45896 thread 152 bound to OS proc set 152
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45897 thread 153 bound to OS proc set 153
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45898 thread 154 bound to OS proc set 154
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45899 thread 155 bound to OS proc set 155
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45900 thread 156 bound to OS proc set 156
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45901 thread 157 bound to OS proc set 157
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45903 thread 159 bound to OS proc set 159
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45902 thread 158 bound to OS proc set 158
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45904 thread 160 bound to OS proc set 160
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45905 thread 161 bound to OS proc set 161
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45906 thread 162 bound to OS proc set 162
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45907 thread 163 bound to OS proc set 163
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45908 thread 164 bound to OS proc set 164
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45909 thread 165 bound to OS proc set 165
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45910 thread 166 bound to OS proc set 166
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45911 thread 167 bound to OS proc set 167
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45912 thread 168 bound to OS proc set 168
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45913 thread 169 bound to OS proc set 169
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45914 thread 170 bound to OS proc set 170
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45916 thread 172 bound to OS proc set 172
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45915 thread 171 bound to OS proc set 171
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45917 thread 173 bound to OS proc set 173
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45918 thread 174 bound to OS proc set 174
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45919 thread 175 bound to OS proc set 175
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45920 thread 176 bound to OS proc set 176
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45921 thread 177 bound to OS proc set 177
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45922 thread 178 bound to OS proc set 178
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45923 thread 179 bound to OS proc set 179
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45924 thread 180 bound to OS proc set 180
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45925 thread 181 bound to OS proc set 181
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45926 thread 182 bound to OS proc set 182
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45927 thread 183 bound to OS proc set 183
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45928 thread 184 bound to OS proc set 184
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45929 thread 185 bound to OS proc set 185
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45930 thread 186 bound to OS proc set 186
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45931 thread 187 bound to OS proc set 187
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45932 thread 188 bound to OS proc set 188
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45933 thread 189 bound to OS proc set 189
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45934 thread 190 bound to OS proc set 190
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45935 thread 191 bound to OS proc set 191
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45936 thread 192 bound to OS proc set 192
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45937 thread 193 bound to OS proc set 193
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45938 thread 194 bound to OS proc set 194
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45939 thread 195 bound to OS proc set 195
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45940 thread 196 bound to OS proc set 196
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45941 thread 197 bound to OS proc set 197
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45942 thread 198 bound to OS proc set 198
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45943 thread 199 bound to OS proc set 199
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45944 thread 200 bound to OS proc set 200
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45945 thread 201 bound to OS proc set 201
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45946 thread 202 bound to OS proc set 202
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45947 thread 203 bound to OS proc set 203
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45948 thread 204 bound to OS proc set 204
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45949 thread 205 bound to OS proc set 205
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45950 thread 206 bound to OS proc set 206
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45951 thread 207 bound to OS proc set 207
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45952 thread 208 bound to OS proc set 208
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45953 thread 209 bound to OS proc set 209
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45954 thread 210 bound to OS proc set 210
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45955 thread 211 bound to OS proc set 211
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45956 thread 212 bound to OS proc set 212
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45958 thread 214 bound to OS proc set 214
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45957 thread 213 bound to OS proc set 213
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45959 thread 215 bound to OS proc set 215
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45961 thread 217 bound to OS proc set 217
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45960 thread 216 bound to OS proc set 216
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45962 thread 218 bound to OS proc set 218
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45963 thread 219 bound to OS proc set 219
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45964 thread 220 bound to OS proc set 220
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45965 thread 221 bound to OS proc set 221
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45967 thread 223 bound to OS proc set 223
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45966 thread 222 bound to OS proc set 222
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45968 thread 224 bound to OS proc set 224
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45969 thread 225 bound to OS proc set 225
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45970 thread 226 bound to OS proc set 226
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45971 thread 227 bound to OS proc set 227
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45972 thread 228 bound to OS proc set 228
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45973 thread 229 bound to OS proc set 229
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45974 thread 230 bound to OS proc set 230
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45975 thread 231 bound to OS proc set 231
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45976 thread 232 bound to OS proc set 232
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45977 thread 233 bound to OS proc set 233
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45978 thread 234 bound to OS proc set 234
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45980 thread 236 bound to OS proc set 236
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45979 thread 235 bound to OS proc set 235
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45981 thread 237 bound to OS proc set 237
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45982 thread 238 bound to OS proc set 238
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45983 thread 239 bound to OS proc set 239
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45984 thread 240 bound to OS proc set 240
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45985 thread 241 bound to OS proc set 241
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45986 thread 242 bound to OS proc set 242
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45987 thread 243 bound to OS proc set 243
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45988 thread 244 bound to OS proc set 244
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45989 thread 245 bound to OS proc set 245
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45990 thread 246 bound to OS proc set 246
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45991 thread 247 bound to OS proc set 247
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45992 thread 248 bound to OS proc set 248
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45993 thread 249 bound to OS proc set 249
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45994 thread 250 bound to OS proc set 250
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45995 thread 251 bound to OS proc set 251
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45996 thread 252 bound to OS proc set 252
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45997 thread 253 bound to OS proc set 253
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45998 thread 254 bound to OS proc set 254
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45999 thread 255 bound to OS proc set 255
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46001 thread 257 bound to OS proc set 257
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46000 thread 256 bound to OS proc set 256
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46002 thread 258 bound to OS proc set 258
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46004 thread 260 bound to OS proc set 260
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46003 thread 259 bound to OS proc set 259
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46005 thread 261 bound to OS proc set 261
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46006 thread 262 bound to OS proc set 262
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46007 thread 263 bound to OS proc set 263
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46009 thread 265 bound to OS proc set 265
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46008 thread 264 bound to OS proc set 264
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46010 thread 266 bound to OS proc set 266
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46011 thread 267 bound to OS proc set 267
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46012 thread 268 bound to OS proc set 268
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46013 thread 269 bound to OS proc set 269
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46014 thread 270 bound to OS proc set 270
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46015 thread 271 bound to OS proc set 271
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46016 thread 272 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 45793 thread 273 bound to OS proc set 1
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46017 thread 274 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46018 thread 275 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46019 thread 276 bound to OS proc set 4
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46020 thread 277 bound to OS proc set 5
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46021 thread 278 bound to OS proc set 6
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46022 thread 279 bound to OS proc set 7
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46023 thread 280 bound to OS proc set 8
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46024 thread 281 bound to OS proc set 9
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46025 thread 282 bound to OS proc set 10
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46026 thread 283 bound to OS proc set 11
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46027 thread 284 bound to OS proc set 12
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46028 thread 285 bound to OS proc set 13
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46029 thread 286 bound to OS proc set 14
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46030 thread 287 bound to OS proc set 15
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46032 thread 289 bound to OS proc set 17
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46031 thread 288 bound to OS proc set 16
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46033 thread 290 bound to OS proc set 18
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46034 thread 291 bound to OS proc set 19
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46035 thread 292 bound to OS proc set 20
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46036 thread 293 bound to OS proc set 21
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46037 thread 294 bound to OS proc set 22
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46038 thread 295 bound to OS proc set 23
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46039 thread 296 bound to OS proc set 24
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46040 thread 297 bound to OS proc set 25
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46041 thread 298 bound to OS proc set 26
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46042 thread 299 bound to OS proc set 27
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46043 thread 300 bound to OS proc set 28
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46044 thread 301 bound to OS proc set 29
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46045 thread 302 bound to OS proc set 30
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46046 thread 303 bound to OS proc set 31
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46047 thread 304 bound to OS proc set 32
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46048 thread 305 bound to OS proc set 33
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46058 thread 306 bound to OS proc set 34
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46059 thread 307 bound to OS proc set 35
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46060 thread 308 bound to OS proc set 36
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46061 thread 309 bound to OS proc set 37
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46062 thread 310 bound to OS proc set 38
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46063 thread 311 bound to OS proc set 39
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46064 thread 312 bound to OS proc set 40
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46065 thread 313 bound to OS proc set 41
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46066 thread 314 bound to OS proc set 42
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46067 thread 315 bound to OS proc set 43
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46068 thread 316 bound to OS proc set 44
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46069 thread 317 bound to OS proc set 45
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46070 thread 318 bound to OS proc set 46
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46071 thread 319 bound to OS proc set 47
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46072 thread 320 bound to OS proc set 48
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46073 thread 321 bound to OS proc set 49
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46074 thread 322 bound to OS proc set 50
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46075 thread 323 bound to OS proc set 51
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46076 thread 324 bound to OS proc set 52
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46077 thread 325 bound to OS proc set 53
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46078 thread 326 bound to OS proc set 54
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46079 thread 327 bound to OS proc set 55
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46080 thread 328 bound to OS proc set 56
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46081 thread 329 bound to OS proc set 57
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46082 thread 330 bound to OS proc set 58
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46083 thread 331 bound to OS proc set 59
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46084 thread 332 bound to OS proc set 60
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46085 thread 333 bound to OS proc set 61
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46086 thread 334 bound to OS proc set 62
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46087 thread 335 bound to OS proc set 63
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46088 thread 336 bound to OS proc set 64
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46089 thread 337 bound to OS proc set 65
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46090 thread 338 bound to OS proc set 66
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46091 thread 339 bound to OS proc set 67
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46092 thread 340 bound to OS proc set 68
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46093 thread 341 bound to OS proc set 69
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46094 thread 342 bound to OS proc set 70
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46095 thread 343 bound to OS proc set 71
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46096 thread 344 bound to OS proc set 72
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46097 thread 345 bound to OS proc set 73
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46098 thread 346 bound to OS proc set 74
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46099 thread 347 bound to OS proc set 75
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46100 thread 348 bound to OS proc set 76
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46101 thread 349 bound to OS proc set 77
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46102 thread 350 bound to OS proc set 78
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46103 thread 351 bound to OS proc set 79
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46104 thread 352 bound to OS proc set 80
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46105 thread 353 bound to OS proc set 81
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46106 thread 354 bound to OS proc set 82
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46107 thread 355 bound to OS proc set 83
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46108 thread 356 bound to OS proc set 84
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46109 thread 357 bound to OS proc set 85
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46110 thread 358 bound to OS proc set 86
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46111 thread 359 bound to OS proc set 87
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46112 thread 360 bound to OS proc set 88
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46113 thread 361 bound to OS proc set 89
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46114 thread 362 bound to OS proc set 90
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46115 thread 363 bound to OS proc set 91
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46116 thread 364 bound to OS proc set 92
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46117 thread 365 bound to OS proc set 93
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46118 thread 366 bound to OS proc set 94
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46120 thread 368 bound to OS proc set 96
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46119 thread 367 bound to OS proc set 95
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46121 thread 369 bound to OS proc set 97
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46122 thread 370 bound to OS proc set 98
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46123 thread 371 bound to OS proc set 99
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46124 thread 372 bound to OS proc set 100
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46125 thread 373 bound to OS proc set 101
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46126 thread 374 bound to OS proc set 102
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46127 thread 375 bound to OS proc set 103
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46129 thread 377 bound to OS proc set 105
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46128 thread 376 bound to OS proc set 104
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46130 thread 378 bound to OS proc set 106
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46131 thread 379 bound to OS proc set 107
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46132 thread 380 bound to OS proc set 108
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46133 thread 381 bound to OS proc set 109
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46134 thread 382 bound to OS proc set 110
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46135 thread 383 bound to OS proc set 111
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46136 thread 384 bound to OS proc set 112
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46137 thread 385 bound to OS proc set 113
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46138 thread 386 bound to OS proc set 114
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46139 thread 387 bound to OS proc set 115
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46140 thread 388 bound to OS proc set 116
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46141 thread 389 bound to OS proc set 117
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46142 thread 390 bound to OS proc set 118
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46143 thread 391 bound to OS proc set 119
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46144 thread 392 bound to OS proc set 120
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46145 thread 393 bound to OS proc set 121
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46146 thread 394 bound to OS proc set 122
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46147 thread 395 bound to OS proc set 123
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46148 thread 396 bound to OS proc set 124
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46149 thread 397 bound to OS proc set 125
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46150 thread 398 bound to OS proc set 126
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46151 thread 399 bound to OS proc set 127
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46152 thread 400 bound to OS proc set 128
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46153 thread 401 bound to OS proc set 129
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46154 thread 402 bound to OS proc set 130
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46155 thread 403 bound to OS proc set 131
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46156 thread 404 bound to OS proc set 132
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46157 thread 405 bound to OS proc set 133
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46158 thread 406 bound to OS proc set 134
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46159 thread 407 bound to OS proc set 135
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46160 thread 408 bound to OS proc set 136
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46161 thread 409 bound to OS proc set 137
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46162 thread 410 bound to OS proc set 138
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46163 thread 411 bound to OS proc set 139
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46164 thread 412 bound to OS proc set 140
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46165 thread 413 bound to OS proc set 141
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46166 thread 414 bound to OS proc set 142
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46167 thread 415 bound to OS proc set 143
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46168 thread 416 bound to OS proc set 144
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46169 thread 417 bound to OS proc set 145
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46170 thread 418 bound to OS proc set 146
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46171 thread 419 bound to OS proc set 147
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46172 thread 420 bound to OS proc set 148
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46173 thread 421 bound to OS proc set 149
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46174 thread 422 bound to OS proc set 150
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46175 thread 423 bound to OS proc set 151
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46176 thread 424 bound to OS proc set 152
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46177 thread 425 bound to OS proc set 153
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46178 thread 426 bound to OS proc set 154
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46179 thread 427 bound to OS proc set 155
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46180 thread 428 bound to OS proc set 156
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46181 thread 429 bound to OS proc set 157
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46182 thread 430 bound to OS proc set 158
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46183 thread 431 bound to OS proc set 159
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46184 thread 432 bound to OS proc set 160
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46185 thread 433 bound to OS proc set 161
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46186 thread 434 bound to OS proc set 162
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46187 thread 435 bound to OS proc set 163
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46188 thread 436 bound to OS proc set 164
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46189 thread 437 bound to OS proc set 165
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46190 thread 438 bound to OS proc set 166
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46191 thread 439 bound to OS proc set 167
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46192 thread 440 bound to OS proc set 168
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46193 thread 441 bound to OS proc set 169
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46194 thread 442 bound to OS proc set 170
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46195 thread 443 bound to OS proc set 171
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46197 thread 445 bound to OS proc set 173
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46196 thread 444 bound to OS proc set 172
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46198 thread 446 bound to OS proc set 174
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46199 thread 447 bound to OS proc set 175
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46200 thread 448 bound to OS proc set 176
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46201 thread 449 bound to OS proc set 177
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46202 thread 450 bound to OS proc set 178
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46203 thread 451 bound to OS proc set 179
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46204 thread 452 bound to OS proc set 180
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46205 thread 453 bound to OS proc set 181
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46206 thread 454 bound to OS proc set 182
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46207 thread 455 bound to OS proc set 183
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46208 thread 456 bound to OS proc set 184
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46209 thread 457 bound to OS proc set 185
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46210 thread 458 bound to OS proc set 186
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46211 thread 459 bound to OS proc set 187
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46212 thread 460 bound to OS proc set 188
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46213 thread 461 bound to OS proc set 189
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46214 thread 462 bound to OS proc set 190
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46215 thread 463 bound to OS proc set 191
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46216 thread 464 bound to OS proc set 192
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46217 thread 465 bound to OS proc set 193
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46219 thread 467 bound to OS proc set 195
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46218 thread 466 bound to OS proc set 194
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46220 thread 468 bound to OS proc set 196
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46221 thread 469 bound to OS proc set 197
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46222 thread 470 bound to OS proc set 198
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46223 thread 471 bound to OS proc set 199
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46224 thread 472 bound to OS proc set 200
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46225 thread 473 bound to OS proc set 201
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46226 thread 474 bound to OS proc set 202
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46227 thread 475 bound to OS proc set 203
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46228 thread 476 bound to OS proc set 204
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46229 thread 477 bound to OS proc set 205
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46230 thread 478 bound to OS proc set 206
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46231 thread 479 bound to OS proc set 207
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46232 thread 480 bound to OS proc set 208
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46233 thread 481 bound to OS proc set 209
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46234 thread 482 bound to OS proc set 210
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46235 thread 483 bound to OS proc set 211
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46236 thread 484 bound to OS proc set 212
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46237 thread 485 bound to OS proc set 213
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46238 thread 486 bound to OS proc set 214
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46239 thread 487 bound to OS proc set 215
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46240 thread 488 bound to OS proc set 216
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46241 thread 489 bound to OS proc set 217
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46242 thread 490 bound to OS proc set 218
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46243 thread 491 bound to OS proc set 219
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46244 thread 492 bound to OS proc set 220
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46245 thread 493 bound to OS proc set 221
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46246 thread 494 bound to OS proc set 222
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46247 thread 495 bound to OS proc set 223
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46248 thread 496 bound to OS proc set 224
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46249 thread 497 bound to OS proc set 225
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46250 thread 498 bound to OS proc set 226
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46251 thread 499 bound to OS proc set 227
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46252 thread 500 bound to OS proc set 228
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46253 thread 501 bound to OS proc set 229
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46254 thread 502 bound to OS proc set 230
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46255 thread 503 bound to OS proc set 231
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46256 thread 504 bound to OS proc set 232
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46257 thread 505 bound to OS proc set 233
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46258 thread 506 bound to OS proc set 234
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46259 thread 507 bound to OS proc set 235
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46260 thread 508 bound to OS proc set 236
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46261 thread 509 bound to OS proc set 237
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46262 thread 510 bound to OS proc set 238
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46263 thread 511 bound to OS proc set 239
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46264 thread 512 bound to OS proc set 240
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46265 thread 513 bound to OS proc set 241
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46266 thread 514 bound to OS proc set 242
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46267 thread 515 bound to OS proc set 243
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46268 thread 516 bound to OS proc set 244
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46269 thread 517 bound to OS proc set 245
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46270 thread 518 bound to OS proc set 246
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46271 thread 519 bound to OS proc set 247
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46272 thread 520 bound to OS proc set 248
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46273 thread 521 bound to OS proc set 249
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46274 thread 522 bound to OS proc set 250
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46275 thread 523 bound to OS proc set 251
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46276 thread 524 bound to OS proc set 252
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46277 thread 525 bound to OS proc set 253
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46278 thread 526 bound to OS proc set 254
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46280 thread 528 bound to OS proc set 256
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46279 thread 527 bound to OS proc set 255
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46281 thread 529 bound to OS proc set 257
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46282 thread 530 bound to OS proc set 258
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46283 thread 531 bound to OS proc set 259
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46284 thread 532 bound to OS proc set 260
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46285 thread 533 bound to OS proc set 261
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46286 thread 534 bound to OS proc set 262
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46287 thread 535 bound to OS proc set 263
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46288 thread 536 bound to OS proc set 264
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46289 thread 537 bound to OS proc set 265
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46290 thread 538 bound to OS proc set 266
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46291 thread 539 bound to OS proc set 267
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46292 thread 540 bound to OS proc set 268
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46293 thread 541 bound to OS proc set 269
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46294 thread 542 bound to OS proc set 270
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46295 thread 543 bound to OS proc set 271
+OMP: Info #250: KMP_AFFINITY: pid 45699 tid 46296 thread 544 bound to OS proc set 0
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+NN Topology:  [5, 32, 5, 64, 1024]
+#iter traintime train-err val-err
+0 0.000000e+00 6.000000e-02 8.560000e-02
+100 0.000000e+00 8.900000e-01 8.712000e-01
+200 1.231863e+01 9.300000e-01 9.192000e-01
+300 2.474681e+01 9.300000e-01 9.376000e-01
+400 3.695540e+01 9.500000e-01 9.454000e-01
+500 4.942153e+01 9.500000e-01 9.532000e-01
+600 6.196789e+01 9.600000e-01 9.556000e-01
+
+Time to error (0.050000): 6.196789e+01 s
+Train iters:          600
+Test accuracy:        9.585000e-01
+
+FoM: 6.196789e+01
