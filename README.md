@@ -166,8 +166,8 @@ as the random data augmentation.
 
 5. Now we are ready to train our ResNet model on multiple nodes using Horovod
    and MPI! If you changed the config to 1 epoch above, be sure to change it back
-   to 32 epochs for this step. To launch the ResNet training on 8 nodes, do:\
-   `sbatch -N 8 scripts/cifar_resnet.sh`
+   to 32 epochs for this step. To launch the ResNet training on 4 nodes, do:\
+   `sbatch -N 4 scripts/cifar_resnet.sh`
 
 6. As before, watch the log file (`logs/cifar-resnet-*.out`) when the job starts.
    You'll see some printouts from every worker. Others are only printed from rank 0.
