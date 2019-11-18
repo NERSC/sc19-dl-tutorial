@@ -229,8 +229,8 @@ training example from before.
    sbatch scripts/hpo_cifar_cnn.sh
    ```
 
-   If no modifications were made, this should take ~12 minutes to run to
-   completion.
+   This HPO run should take a while. Feel free to move on to the next example
+   while this runs.
 
 4. Take a look at your job output file (`*.out`) in the `logs/` directory. Try
    to identify the following:
