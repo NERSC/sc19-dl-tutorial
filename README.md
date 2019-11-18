@@ -62,6 +62,8 @@ for easily submitting the example jobs to the Cori batch system.
 **`utils/`** - contains additional useful code for the training script, e.g.
 custom callbacks, device configuration, and optimizers logic.
 
+**`hpo/`** - contains READMEs and examples for HPO hands-on.
+
 ## Hands-on walk-through
 
 Go through the following steps as directed by the tutorial presenters.

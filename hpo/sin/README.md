@@ -24,7 +24,7 @@ The kernel script can be run via command line on the login node:
     python3 source/sin.py
 
 Try running it directly with the default arguments. You are welcome to take a
-try hand-tuning the hyperparameters to lower the FoM value before trying HPO. 
+try hand-tuning the hyperparameters to lower the FoM value before trying HPO.
 The script supports a `--help` flag which lists the options:
 
     # From this directory
