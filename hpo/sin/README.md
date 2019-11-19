@@ -43,8 +43,8 @@ The HPO scripts should be launched onto an allocation by submitting their
 respective batch script:
 
     # From top-level directory of repository
-    sbatch scripts/hpo_grid.sh
-    sbatch scripts/hpo_random.sh
-    sbatch scripts/hpo_genetic.sh
+    sbatch scripts/hpo_grid_example.sh
+    sbatch scripts/hpo_random_example.sh
+    sbatch scripts/hpo_genetic_example.sh
 
 Each of these examples takes 30-60 seconds to run to completion on 1 node.
