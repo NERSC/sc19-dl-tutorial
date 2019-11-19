@@ -1,6 +1,6 @@
 *.ipynb_checkpoints
 *.log
-*.out
+logs/*.out
 *.gz
 run
 *__pycache__*

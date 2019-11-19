@@ -1,0 +1,151 @@
+import keras; keras.datasets.cifar10.load_data()
+Using TensorFlow backend.
+python hpo_train.py -N 8 --verbose
+1.2522231845855714
+{'--optimizer lr': 0.0011536366, '--dropout': 0.0051919226}
+Detected Slurm as the workload manager
+------------------------------------------------------------
+Optimizer Settings:
+------------------------------------------------------------
+generations:        4
+num_demes:          1
+pop_size:           8
+verbose:            true
+mutation_rate:      0.6
+crossover_rate:     0.33
+migration_interval: 5
+------------------------------------------------------------
+Evaluator Settings:
+------------------------------------------------------------
+run_path:           "run"
+fom:                "FoM: "
+nodes:              8
+launcher:           wlm
+------------------------------------------------------------
+Adding 8 individuals to each deme with genotype:
+--optimizer lr:  0.001,
+--dropout:  0.1,
+Adding mutants to first generation.
+------------------------------------------------------------
+Generation: 0
+------------------------------------------------------------
+Evaluating 8 genotypes.
+Generation 0: 1/8 evaluations completed
+Generation 0: 2/8 evaluations completed
+Generation 0: 3/8 evaluations completed
+Generation 0: 4/8 evaluations completed
+Generation 0: 5/8 evaluations completed
+Generation 0: 7/8 evaluations completed
+Generation 0: 8/8 evaluations completed
+Generation 0: 7/8 evaluations completed
+------------------------------------------------------------
+Global Best: deme1_ind5        1.258409e+00 (1.1x) [1.468e+00 avg]
+Best hyperparameters:
+--optimizer lr:  0.00099883403
+--dropout:  0.088423011
+------------------------------------------------------------
+deme1     size: 8     fom: 1.468e+00 (avg)
+  deme1_ind5          fom: 1.258e+00 (local best)
+--optimizer lr=0.00099883403 --dropout=0.088423011
+------------------------------------------------------------
+Timings:
+Setup:           2.515e-04 s
+Reading checkpoint: 6.250e-07 s
+Evaluation:      4.158e+02 s
+Writing checkpoint: 1.375e-06 s
+Cleanup:         0.000e+00 s
+------------------------------------------------------------
+Migrating individuals across demes.
+Migrating deme1_ind5 to deme1
+------------------------------------------------------------
+Generation: 1
+------------------------------------------------------------
+Evaluating 8 genotypes.
+Generation 1: 1/8 evaluations completed
+Generation 1: 2/8 evaluations completed
+Generation 1: 3/8 evaluations completed
+Generation 1: 5/8 evaluations completed
+Generation 1: 5/8 evaluations completed
+Generation 1: 6/8 evaluations completed
+Generation 1: 7/8 evaluations completed
+Generation 1: 8/8 evaluations completed
+------------------------------------------------------------
+Global Best: deme1_ind5        1.258409e+00 (1.1x) [3.234e+00 avg]
+Best hyperparameters:
+--optimizer lr:  0.00099883403
+--dropout:  0.088423011
+------------------------------------------------------------
+deme1     size: 8     fom: 3.234e+00 (avg)
+  deme1_ind13         fom: 1.272e+00 (local best)
+--optimizer lr=0.00099883403 --dropout=0.077457299
+------------------------------------------------------------
+Timings:
+Setup:           2.440e-04 s
+Reading checkpoint: 6.250e-07 s
+Evaluation:      4.110e+02 s
+Writing checkpoint: 1.375e-06 s
+Cleanup:         0.000e+00 s
+------------------------------------------------------------
+------------------------------------------------------------
+Generation: 2
+------------------------------------------------------------
+Evaluating 8 genotypes.
+Generation 2: 1/8 evaluations completed
+Generation 2: 2/8 evaluations completed
+Generation 2: 3/8 evaluations completed
+Generation 2: 4/8 evaluations completed
+Generation 2: 6/8 evaluations completed
+Generation 2: 7/8 evaluations completed
+Generation 2: 5/8 evaluations completed
+Generation 2: 8/8 evaluations completed
+------------------------------------------------------------
+Global Best: deme1_ind5        1.258409e+00 (1.1x) [1.938e+00 avg]
+Best hyperparameters:
+--optimizer lr:  0.00099883403
+--dropout:  0.088423011
+------------------------------------------------------------
+deme1     size: 8     fom: 1.938e+00 (avg)
+  deme1_ind24         fom: 1.286e+00 (local best)
+--optimizer lr=0.00098792034 --dropout=0.086596908
+------------------------------------------------------------
+Timings:
+Setup:           1.826e-04 s
+Reading checkpoint: 7.500e-07 s
+Evaluation:      3.981e+02 s
+Writing checkpoint: 2.125e-06 s
+Cleanup:         2.500e-07 s
+------------------------------------------------------------
+------------------------------------------------------------
+Generation: 3
+------------------------------------------------------------
+Evaluating 8 genotypes.
+Generation 3: 1/8 evaluations completed
+Generation 3: 2/8 evaluations completed
+Generation 3: 3/8 evaluations completed
+Generation 3: 5/8 evaluations completed
+Generation 3: 6/8 evaluations completed
+Generation 3: 7/8 evaluations completed
+Generation 3: 4/8 evaluations completed
+Generation 3: 8/8 evaluations completed
+------------------------------------------------------------
+Global Best: deme1_ind32       1.252223e+00 (1.1x) [1.436e+00 avg]
+Best hyperparameters:
+--optimizer lr:  0.0011536366
+--dropout:  0.0051919226
+------------------------------------------------------------
+deme1     size: 8     fom: 1.436e+00 (avg)
+  deme1_ind32         fom: 1.252e+00 (local best)
+--optimizer lr=0.0011536366 --dropout=0.0051919226
+------------------------------------------------------------
+Timings:
+Setup:           3.499e-03 s
+Reading checkpoint: 6.250e-07 s
+Evaluation:      3.889e+02 s
+Writing checkpoint: 1.875e-06 s
+Cleanup:         0.000e+00 s
+------------------------------------------------------------
+------------------------------------------------------------
+Best:  deme1_ind32         fom: 1.252223e+00  (1.07988x)
+--optimizer lr=0.0011536366 --dropout=0.0051919226
+------------------------------------------------------------
+Nodes deallocated
