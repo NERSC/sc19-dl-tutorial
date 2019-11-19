@@ -44,7 +44,7 @@ The exposed hyperparameters include:
 To run the kernel script directly, use the batch script:
 
     # From top-level directory of repository
-    sbatch scripts/mnist_topo.sh
+    sbatch scripts/mnist_lenet5.sh
 
 A single run should take about 1 minute to complete.
 
@@ -53,6 +53,4 @@ A single run should take about 1 minute to complete.
 To run the HPO driver, use the batch script:
 
     # From top-level directory of repository
-    sbatch scripts/mnist_topo.sh
-
-This example should take ~12 minutes to run to completion.
+    sbatch scripts/hpo_mnist_lenet5.sh
